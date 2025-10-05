@@ -75,17 +75,17 @@ const Services = () => {
                 <div className="absolute -top-20 -left-20 w-96 h-96 rounded-full bg-yellow-400/30 blur-3xl animate-pulse-slow"></div>
                 <div className="absolute -bottom-32 right-0 w-96 h-96 rounded-full bg-blue-400/20 blur-3xl animate-spin-slow"></div>
 
-                <div className="relative max-w-7xl mx-auto h-full flex flex-col md:flex-row items-center justify-center px-6 md:px-24">
+                <div className="relative max-w-7xl mx-auto h-full flex flex-col mk:flex-row items-center justify-center px-6 mk:px-24">
 
                     {/* Left: Text + Highlights */}
-                    <motion.div
-                        className="md:w-1/2 space-y-6 z-10"
+                  <motion.div
+                        className="mk:w-1/2 space-y-6 z-10"
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1 }}
                     >
-                        <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-gray-900">
-                            Powering <span className="text-yellow-400">Every Space</span> <br />
+                        <h1 className="text-4xl md:text-6xl sk:mt-0 mt-12 font-extrabold sm:leading-tight text-gray-900">
+                            Powering <span className="text-yellow-400">Every Space</span> <br className='sk:block hidden' />
                             with <span className="text-blue-500">Energy & Safety</span>
                         </h1>
                         <p className="text-gray-700 text-lg md:text-xl max-w-md">
@@ -93,15 +93,15 @@ const Services = () => {
                         </p>
                         <div className="flex gap-4 mt-4">
                             <Link to='/contact'>
-                                <button className="bg-yellow-400 text-gray-900 px-8 py-3 rounded-full font-semibold hover:scale-105 transition">Get a Quote</button>
+                                <button className="bg-yellow-400 text-gray-900 sm:px-8 px-4 py-3 rounded-full font-semibold hover:scale-105 transition">Get a Quote</button>
                             </Link>
                             <a href='#more'>
-                                <button className="border border-blue-500 text-blue-500 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition">Learn More</button>
+                                <button className="border border-blue-500 text-blue-500 sm:px-8 px-4 py-3 rounded-full font-semibold hover:bg-blue-50 transition">Learn More</button>
                             </a>
                         </div>
 
                         {/* Highlighted service mini-cards integrated in hero */}
-                        <div className="flex flex-col gap-4 mt-10">
+                        <div className="flex flex-col sk:gap-4 gap-2 mt-10">
                             {services.slice(0, 3).map((s, idx) => (
                                 <motion.div key={idx} className="bg-white/80 backdrop-blur-lg rounded-2xl p-4 shadow-lg flex items-center gap-4 hover:scale-105 transition cursor-pointer"
                                     initial={{ opacity: 0, y: 30 }}
@@ -120,7 +120,7 @@ const Services = () => {
 
                     {/* Right: Collage of images */}
                     <motion.div
-                        className="md:w-1/2 relative mt-10 md:mt-0 flex justify-center items-center"
+                        className="mk:w-1/2 relative mt-10 mk:mt-0 flex justify-center items-center"
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1 }}
@@ -141,7 +141,7 @@ const Services = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-5xl font-extrabold text-gray-800">Explore Our Services</h2>
+                    <h2 className="md:text-5xl text-3xl font-extrabold text-gray-800">Explore Our Services</h2>
                     <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
                         Innovative solutions designed for impact, efficiency, and peace of mind.
                     </p>
@@ -170,7 +170,7 @@ const Services = () => {
                             ></div>
 
                             {/* Image / Visual */}
-                            <div className={`md:w-1/2 ${idx % 2 !== 0 ? "order-2" : ""} relative`}>
+                            <div className={`mk:w-1/2 ${idx % 2 !== 0 ? "order-2" : ""} relative`}>
                                 <motion.img
                                     src={service.img}
                                     alt={service.title}
@@ -187,8 +187,8 @@ const Services = () => {
                             </div>
 
                             {/* Content Panel with Connector */}
-                            <div className="md:w-1/2 space-y-6 p-6 relative">
-                                <h3 className="text-3xl font-bold text-gray-800">{service.title}</h3>
+                            <div className="mk:w-1/2 space-y-6 p-6 relative">
+                                <h3 className="md:text-3xl text-2xl font-bold text-gray-800">{service.title}</h3>
                                 <p className="text-gray-700">{service.desc}</p>
                                 <Link to='/contact'>
                                     <button className="px-6 py-2 mt-3 rounded-full bg-blue-500 text-white font-semibold hover:bg-blue-600 hover:scale-105 transition transform">
@@ -216,7 +216,7 @@ const Services = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-5xl font-extrabold text-gray-800">
+                    <h2 className="md:text-5xl text-3xl font-extrabold text-gray-800">
                         Why Choose <span className="text-blue-500">Us</span>
                     </h2>
                     <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
@@ -249,7 +249,7 @@ const Services = () => {
                                 className={`md:w-1/2 bg-white/70 backdrop-blur-md rounded-3xl p-10 shadow-xl relative z-10 transform hover:scale-105 transition cursor-pointer`}
                                 whileHover={{ y: -5 }}
                             >
-                                <h3 className="text-2xl font-bold mb-4 text-center md:text-left">{item.title}</h3>
+                                <h3 className="md:text-2xl text-xl font-bold mb-4 text-center md:text-left">{item.title}</h3>
                                 <p className="text-gray-700 text-center md:text-left">{item.desc}</p>
                             </motion.div>
 
@@ -299,7 +299,7 @@ const Services = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-5xl font-extrabold text-gray-800">How It Works</h2>
+                    <h2 className="md:text-5xl text-3xl font-extrabold text-gray-800">How It Works</h2>
                     <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
                         A simple, clear process to get your services done efficiently and safely.
                     </p>
@@ -335,7 +335,7 @@ const Services = () => {
                         >
                             {/* Icon Circle */}
                             <motion.div
-                                className="flex-shrink-0 w-28 h-28 rounded-full bg-yellow-400 flex items-center justify-center text-5xl shadow-lg z-10"
+                                className="flex-shrink-0 md:size-28 size-20 rounded-full bg-yellow-400 flex items-center justify-center text-5xl shadow-lg z-10"
                                 animate={{ y: [0, -10, 0] }}
                                 transition={{ duration: 2, repeat: Infinity }}
                             >

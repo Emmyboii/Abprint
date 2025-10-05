@@ -247,37 +247,35 @@ const Home = () => {
                     </div>
                 </section>
 
-                {/* 2️⃣ Why Choose Us */}
                 <section className="relative bg-gray-50 py-28 px-6 md:px-24 overflow-hidden">
                     {/* Background floating shapes */}
-                    <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/20 rounded-full filter blur-3xl animate-pulse-slow pointer-events-none"></div>
-                    <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-gray-700/20 rounded-full filter blur-3xl animate-pulse-slow pointer-events-none"></div>
-                    <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-gradient-to-r from-blue-500/10 to-gray-700/10 rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+                    <div className="absolute -top-32 -left-32 w-72 h-72 md:w-96 md:h-96 bg-blue-500/20 rounded-full filter blur-3xl animate-pulse-slow pointer-events-none"></div>
+                    <div className="absolute -bottom-40 -right-40 w-72 h-72 md:w-96 md:h-96 bg-gray-700/20 rounded-full filter blur-3xl animate-pulse-slow pointer-events-none"></div>
+                    <div className="absolute top-1/2 left-1/2 w-72 h-72 md:w-[600px] md:h-[600px] bg-gradient-to-r from-blue-500/10 to-gray-700/10 rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
 
-                    <div className="relative flex flex-col md:flex-row items-center gap-16">
-                        {/* Image floating slightly outside container */}
-                        <div className="md:w-1/2 relative z-10">
+                    <div className="relative flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
+                        {/* Image */}
+                        <div className="w-full md:w-1/2 relative z-10">
                             <img
                                 src={electricians2}
                                 alt="Smiling Electrician"
-                                className="rounded-3xl shadow-2xl w-full object-cover transform hover:scale-105 transition-transform duration-700"
+                                className="rounded-3xl shadow-2xl w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
                             />
-                            {/* Subtle glowing border */}
                             <div className="absolute inset-0 rounded-3xl border-2 border-blue-500/30 animate-ping-slow pointer-events-none"></div>
                         </div>
 
-                        {/* Floating Glass Panel */}
-                        <div className="md:w-1/2 relative">
-                            <div className="bg-white/10 backdrop-blur-md p-10 rounded-3xl shadow-2xl space-y-8 border border-gray-200/20">
-                                <h2 className="text-4xl md:text-5xl font-extrabold text-gray-700 leading-tight">
+                        {/* Glass Panel */}
+                        <div className="w-full md:w-1/2 relative">
+                            <div className="bg-white/10 backdrop-blur-md p-8 md:p-10 rounded-3xl shadow-2xl space-y-8 border border-gray-200/20">
+                                <h2 className="text-3xl md:text-4xl font-extrabold text-gray-700 leading-tight">
                                     Why Choose <span className="text-blue-500">Us</span>
                                 </h2>
-                                <p className="text-gray-600 text-lg md:text-xl max-w-xl">
+                                <p className="text-gray-600 text-base md:text-lg">
                                     We combine professionalism, skill, and honesty to deliver flawless electrical services, ensuring your home or business shines safely and efficiently.
                                 </p>
 
-                                {/* Floating icons around the glass panel */}
-                                <div className="grid grid-cols-2 gap-6">
+                                {/* Feature Icons */}
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     {[
                                         { icon: <FaShieldAlt className="text-blue-500" />, text: "Licensed & Insured" },
                                         { icon: <FaHandshake className="text-blue-500" />, text: "Transparent Pricing" },
@@ -286,44 +284,41 @@ const Home = () => {
                                     ].map((item, idx) => (
                                         <div
                                             key={idx}
-                                            className="flex items-center gap-4 p-5 rounded-2xl bg-white/20 backdrop-blur-md shadow-lg hover:shadow-2xl hover:-translate-y-1 transition transform duration-500 group cursor-pointer"
+                                            className="flex items-center gap-4 p-4 rounded-2xl bg-white/20 backdrop-blur-md shadow-lg hover:shadow-2xl hover:-translate-y-1 transition transform duration-500 group cursor-pointer"
                                         >
                                             <div className="text-3xl group-hover:scale-110 transition-transform duration-500">{item.icon}</div>
-                                            <span className="text-gray-700 font-semibold text-lg">{item.text}</span>
+                                            <span className="text-gray-700 font-semibold text-sm md:text-base">{item.text}</span>
                                         </div>
                                     ))}
                                 </div>
                             </div>
 
-                            {/* Floating tiny accents */}
-                            <div className="absolute -top-8 -left-6 w-6 h-6 bg-blue-500 rounded-full animate-bounce-slow"></div>
-                            <div className="absolute -bottom-6 -right-8 w-8 h-8 bg-gray-700/50 rounded-full animate-bounce-slow delay-200"></div>
-                            <div className="absolute top-1/3 -right-10 w-5 h-5 bg-blue-500/50 rounded-full animate-bounce-slow delay-400"></div>
+                            {/* Tiny floating accents */}
+                            <div className="absolute -top-4 -left-4 w-5 h-5 bg-blue-500 rounded-full animate-bounce-slow"></div>
+                            <div className="absolute -bottom-4 -right-4 w-6 h-6 bg-gray-700/50 rounded-full animate-bounce-slow delay-200"></div>
+                            <div className="absolute top-1/3 -right-6 w-4 h-4 bg-blue-500/50 rounded-full animate-bounce-slow delay-400"></div>
                         </div>
                     </div>
                 </section>
 
-                {/* services */}
                 <section className="py-20 px-6 md:px-24 bg-gradient-to-b from-gray-900 to-gray-800 text-white">
                     <div className="max-w-7xl mx-auto">
+
                         {/* Header + filters */}
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-10">
                             <div>
-                                <h2 className="text-4xl font-extrabold">Our Services — engineered for results</h2>
-                                <p className="mt-2 text-gray-300 max-w-lg">
+                                <h2 className="text-3xl md:text-4xl font-extrabold">Our Services — Engineered for Results</h2>
+                                <p className="mt-2 text-gray-300 max-w-lg text-sm md:text-base">
                                     We blend technical skill with thoughtful design — choose a category to explore focused solutions.
                                 </p>
                             </div>
 
                             {/* Filter Chips */}
-                            <div className="flex gap-3 items-center">
+                            <div className="flex flex-wrap gap-3 items-center">
                                 {["All", "Electrical", "Handyman", "Lighting", "Appliance"].map((c) => (
                                     <button
                                         key={c}
-                                        onClick={() => {
-                                            setFilter(c);
-                                            setExpanded(null);
-                                        }}
+                                        onClick={() => { setFilter(c); setExpanded(null); }}
                                         className={`px-3 py-1.5 rounded-full text-sm font-medium transition ${filter === c
                                             ? "bg-blue-500 text-white shadow-lg"
                                             : "bg-gray-700 hover:bg-gray-600 text-gray-200"
@@ -336,8 +331,9 @@ const Home = () => {
                             </div>
                         </div>
 
-                        {/* Grid: featured + others */}
+                        {/* Grid: Featured + Service Cards */}
                         <div className="grid grid-cols-1 md:grid-cols-6 gap-6">
+
                             {/* Featured hub */}
                             <motion.div
                                 ref={featuredRef}
@@ -349,63 +345,61 @@ const Home = () => {
                                 }}
                                 className="md:col-span-3 col-span-1 rounded-3xl overflow-hidden bg-gray-800 border border-gray-700"
                             >
-                                <div className="relative h-full p-6 md:p-8">
-                                    {/* Decorative accent glow */}
+                                <div className="relative h-full p-6 md:p-8 flex flex-col gap-6">
+
                                     <div className="absolute -top-10 -right-10 w-56 h-56 rounded-full bg-blue-500/10 blur-3xl pointer-events-none"></div>
+
                                     <div className="flex items-start gap-4">
                                         <div className="w-14 h-14 rounded-lg bg-blue-500 flex items-center justify-center text-gray-900 text-2xl shadow">
                                             ⚡
                                         </div>
                                         <div>
                                             <h3 className="text-2xl font-bold">Niftium Service Hub</h3>
-                                            <p className="text-gray-300 mt-2 max-w-sm">
+                                            <p className="text-gray-300 mt-2 max-w-sm text-sm md:text-base">
                                                 Featured solutions and curated combos — quick-view details appear here when you hover or click a service card.
                                             </p>
                                         </div>
                                     </div>
 
-                                    {/* Dynamic preview area */}
-                                    <div className="mt-6 grid grid-cols-1 gap-4">
+                                    <div className="grid grid-cols-1 gap-4">
                                         <div className="rounded-xl bg-gray-700/70 p-4 border border-gray-600">
                                             <p className="text-sm text-gray-300">
                                                 Tip: try the category filters or click any card to open a short case preview with before/after.
                                             </p>
                                         </div>
 
-                                        {/* quick CTA row */}
-                                        <div className="flex gap-3 items-center mt-2">
+                                        <div className="flex flex-col sm:flex-row gap-3 mt-2">
                                             <Link
                                                 to="/services"
-                                                className="bg-blue-500 px-4 py-2 rounded-full font-semibold shadow hover:bg-blue-600"
+                                                className="bg-blue-500 px-4 py-2 rounded-full font-semibold shadow hover:bg-blue-600 text-center"
                                             >
                                                 View All Services
                                             </Link>
                                             <a
                                                 href="tel:5139152419"
-                                                className="px-4 py-2 rounded-full border border-gray-600 text-gray-200 hover:bg-gray-700"
+                                                className="px-4 py-2 rounded-full border border-gray-600 text-gray-200 hover:bg-gray-700 text-center"
                                             >
                                                 Call: 513-915-2419
                                             </a>
                                         </div>
                                     </div>
 
-                                    {/* small feature stats */}
-                                    <div className="mt-6 grid grid-cols-3 gap-3">
+                                    <div className="mt-6 grid grid-cols-3 gap-3 text-center text-sm sm:text-base">
                                         {[
                                             { value: "150+", label: "Jobs Completed" },
                                             { value: "4.9", label: "Avg Rating" },
                                             { value: "Tri-State", label: "OH / KY / IN" },
                                         ].map((stat, i) => (
-                                            <div key={i} className="text-center">
+                                            <div key={i}>
                                                 <div className="text-2xl font-bold text-white">{stat.value}</div>
-                                                <div className="text-xs text-gray-400">{stat.label}</div>
+                                                <div className="text-gray-400">{stat.label}</div>
                                             </div>
                                         ))}
                                     </div>
                                 </div>
                             </motion.div>
 
-                            {/* Right: service cards */}
+                            {/* Service cards */}
                             <div className="md:col-span-3 col-span-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <AnimatePresence mode="popLayout">
                                     {visible.map((s) => (
@@ -419,7 +413,7 @@ const Home = () => {
                                             className="relative rounded-2xl overflow-hidden cursor-pointer"
                                             onClick={() => setExpanded((prev) => (prev === s.id ? null : s.id))}
                                         >
-                                            {/* card visual */}
+                                            {/* Card Visual */}
                                             <div className="p-5 rounded-2xl bg-gray-700 text-white border border-gray-600 shadow hover:shadow-blue-500/20 transition-all">
                                                 <div className="flex items-center gap-4">
                                                     <div className="w-12 h-12 rounded-lg bg-blue-500 flex items-center justify-center text-xl">
@@ -431,34 +425,29 @@ const Home = () => {
                                                     </div>
                                                 </div>
 
-                                                <div className="mt-4 flex items-center justify-between">
-                                                    {/* <span className="text-xs text-gray-400">
-                                                        Starting at <strong>$79</strong>
-                                                    </span> */}
-                                                    <div className="flex items-center gap-3">
-                                                        <button
-                                                            onClick={(e) => {
-                                                                e.stopPropagation();
-                                                                window.location.href = "/contact";
-                                                            }}
-                                                            className="text-xs bg-blue-500 px-3 py-1 rounded-full font-semibold hover:bg-blue-600 transition"
-                                                        >
-                                                            Book
-                                                        </button>
-                                                        <button
-                                                            onClick={(e) => {
-                                                                e.stopPropagation();
-                                                                setExpanded((prev) => (prev === s.id ? null : s.id));
-                                                            }}
-                                                            className="text-xs text-gray-200 px-3 py-1 rounded-full border border-gray-600 hover:bg-gray-600"
-                                                        >
-                                                            Details
-                                                        </button>
-                                                    </div>
+                                                <div className="mt-4 flex flex-wrap gap-3">
+                                                    <button
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            window.location.href = "/contact";
+                                                        }}
+                                                        className="text-xs bg-blue-500 px-3 py-1 rounded-full font-semibold hover:bg-blue-600 transition"
+                                                    >
+                                                        Book
+                                                    </button>
+                                                    <button
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            setExpanded((prev) => (prev === s.id ? null : s.id));
+                                                        }}
+                                                        className="text-xs text-gray-200 px-3 py-1 rounded-full border border-gray-600 hover:bg-gray-600"
+                                                    >
+                                                        Details
+                                                    </button>
                                                 </div>
                                             </div>
 
-                                            {/* inline expanded case-study */}
+                                            {/* Expanded details */}
                                             <AnimatePresence>
                                                 {expanded === s.id && (
                                                     <motion.div
@@ -469,16 +458,10 @@ const Home = () => {
                                                         className="bg-gray-800 border border-gray-700 p-4 mt-3 rounded-b-2xl"
                                                     >
                                                         <div className="flex flex-col sm:flex-row gap-4">
-                                                            {/* <div className="flex-1 rounded-md overflow-hidden bg-gray-700">
-                                                                <div className="relative h-36">
-                                                                    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1564518098559-965d3f7b6a64?auto=format&fit=crop&w=800&q=60')] bg-cover bg-center opacity-60"></div>
-                                                                </div>
-                                                            </div> */}
-
                                                             <div className="flex-1">
                                                                 <h5 className="font-semibold">{s.title} — Case Snapshot</h5>
                                                                 <p className="text-sm text-gray-300 mt-2">{s.long}</p>
-                                                                <div className="mt-4 flex gap-3">
+                                                                <div className="mt-4 flex flex-wrap gap-3">
                                                                     <Link
                                                                         to="/contact"
                                                                         className="bg-blue-500 px-3 py-2 rounded-full text-sm font-semibold hover:bg-blue-600"
@@ -507,20 +490,20 @@ const Home = () => {
                         <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-4">
                             <div>
                                 <h4 className="text-xl font-semibold">Not sure where to start?</h4>
-                                <p className="text-gray-300 text-sm">
+                                <p className="text-gray-300 text-sm md:text-base">
                                     Tell us what you need and we’ll suggest the right service bundle.
                                 </p>
                             </div>
-                            <div className="flex gap-3">
+                            <div className="flex flex-wrap gap-3">
                                 <Link
                                     to="/contact"
-                                    className="bg-blue-500 px-5 py-3 rounded-full font-semibold hover:bg-blue-600"
+                                    className="bg-blue-500 px-5 py-3 rounded-full font-semibold hover:bg-blue-600 text-center"
                                 >
                                     Request a Walkthrough
                                 </Link>
                                 <Link
                                     to="/services"
-                                    className="border border-gray-700 px-5 py-3 rounded-full text-gray-200 hover:bg-gray-700"
+                                    className="border border-gray-700 px-5 py-3 rounded-full text-gray-200 hover:bg-gray-700 text-center"
                                 >
                                     See Full Services
                                 </Link>

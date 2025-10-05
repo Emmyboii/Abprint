@@ -78,7 +78,7 @@ const Contact = () => {
                         </motion.p>
 
                         <motion.button
-                            className="bg-blue-500 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-blue-400/40 hover:scale-105 transition-transform"
+                            className="bg-blue-500 text-white px-8 py-3 mb-3 rounded-full font-semibold shadow-lg hover:shadow-blue-400/40 hover:scale-105 transition-transform"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}

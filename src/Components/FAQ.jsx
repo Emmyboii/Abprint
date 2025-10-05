@@ -43,7 +43,7 @@ export default function FAQ() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-5xl font-extrabold text-gray-800">Frequently Asked Questions</h2>
+        <h2 className="md:text-5xl text-3xl font-extrabold text-gray-800">Frequently Asked Questions</h2>
         <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
           Clear answers to our most common questions.
         </p>

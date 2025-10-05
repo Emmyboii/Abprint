@@ -117,7 +117,7 @@ const WhoWeAreSection = () => {
 
             {/* Main heading */}
             <motion.h2
-                className="text-5xl md:text-6xl font-extrabold text-gray-700 text-center mb-24 relative z-10"
+                className="sm:text-5xl text-4xl md:text-6xl font-extrabold text-gray-700 text-center mb-24 relative z-10"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -232,7 +232,7 @@ const ValuesSection = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-gray-100 pointer-events-none"></div>
 
             <motion.h2
-                className="text-5xl md:text-6xl font-extrabold text-gray-800 text-center mb-24 relative z-10"
+                className="sm:text-5xl text-4xl md:text-6xl font-extrabold text-gray-800 text-center mb-24 relative z-10"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -308,7 +308,7 @@ const MissionVisionSection = () => {
             <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl animate-pulse-slow pointer-events-none"></div>
 
             <motion.h2
-                className="text-5xl md:text-6xl font-extrabold text-gray-800 text-center mb-24 relative z-10"
+                className="sm:text-5xl text-4xl md:text-6xl font-extrabold text-gray-800 text-center mb-24 relative z-10"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -335,7 +335,7 @@ const MissionVisionSection = () => {
                             <div className="flex items-center justify-center w-20 h-20 rounded-full bg-white/20">
                                 {item.icon}
                             </div>
-                            <h3 className="text-3xl font-bold">{item.title}</h3>
+                            <h3 className="md:text-3xl text-2xl font-bold">{item.title}</h3>
                             <p className="text-lg leading-relaxed">{item.desc}</p>
                         </div>
 

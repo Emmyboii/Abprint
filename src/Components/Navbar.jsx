@@ -27,7 +27,7 @@ const Navbar = () => {
     return (
         <div className="font-sans text-gray-800 antialiased sticky top-0 z-50">
             {/* Top Info Bar */}
-            <div className="bg-blue-500 text-white text-sm px-6 md:px-24 py-3 flex items-center justify-between">
+            <div className="bg-blue-500 text-white sm:text-sm text-xs px-4 md:px-24 py-3 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                     <FaLocationDot className="text-lg" />
                     <span>Serving Ohio • Kentucky • Indiana</span>
@@ -47,9 +47,9 @@ const Navbar = () => {
 
             {/* Navbar */}
             <header className="bg-gray-700 text-white px-6 md:px-24 sticky top-10 z-50 shadow-md">
-                <div className="max-w-[1400px] mx-auto flex items-center justify-between py-4 relative">
+                <div className="max-w-[1400px] mx-auto flex items-center justify-between md:py-4 py-2 relative">
                     <Link to="/" className="flex items-center gap-4 z-20">
-                        <img src={logo} alt="Niftium Logo" className="w-[80px]" />
+                        <img src={logo} alt="Niftium Logo" className="sm:w-[80px] w-[50px]" />
                     </Link>
 
                     {/* Desktop nav */}
