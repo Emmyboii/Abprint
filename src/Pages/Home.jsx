@@ -153,7 +153,7 @@ const Home = () => {
                                 handyman solutions trusted across Ohio, Kentucky, and Indiana.
                             </p>
 
-                            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                            <div className="mt-8 grid sm:grid-cols-2 grid-cols-1 gap-4">
                                 <Link
                                     to="/contact"
                                     className="bg-blue-500 hover:bg-blue-600 px-8 py-3 text-center rounded-full font-semibold shadow-lg transition"
@@ -168,7 +168,7 @@ const Home = () => {
                                 </a>
                                 <a
                                     href="mailto:Niftiumllc@gmail.com"
-                                    className="border border-gray-400 hover:border-blue-400 px-8 py-3 rounded-full text-white/90 text-center transition"
+                                    className="border border-gray-400 hover:border-blue-400 px-8 sm:col-span-2 py-3 rounded-full text-white/90 text-center transition"
                                 >
                                     Email: Niftiumllc@gmail.com
                                 </a>
