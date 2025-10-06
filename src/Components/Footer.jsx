@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaArrowUp, FaFacebookF, FaInstagram, FaPhone, FaLocationDot, FaXTwitter } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import logo from "../Images/Logo2.png";
 
