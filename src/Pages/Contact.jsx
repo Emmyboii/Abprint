@@ -79,8 +79,8 @@ const Contact = () => {
                         {
                             icon: <FaEnvelope className="text-blue-500 text-3xl" />,
                             title: "Email Us",
-                            desc: "info@niftiumelectric.com",
-                            link: "mailto:info@niftiumelectric.com",
+                            desc: "Niftiumllc@gmail.com",
+                            link: "mailto:Niftiumllc@gmail.com",
                         },
                         {
                             icon: <FaLocationDot className="text-blue-500 text-3xl" />,

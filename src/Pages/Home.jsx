@@ -156,7 +156,7 @@ const Home = () => {
                             <div className="mt-8 flex flex-col sm:flex-row gap-4">
                                 <Link
                                     to="/contact"
-                                    className="bg-blue-500 hover:bg-blue-600 px-8 py-3 rounded-full font-semibold shadow-lg transition"
+                                    className="bg-blue-500 hover:bg-blue-600 px-8 py-3 text-center rounded-full font-semibold shadow-lg transition"
                                 >
                                     Request a Free Quote
                                 </Link>
@@ -165,6 +165,12 @@ const Home = () => {
                                     className="border border-gray-400 hover:border-blue-400 px-8 py-3 rounded-full text-white/90 text-center transition"
                                 >
                                     Call: 513-915-2419
+                                </a>
+                                <a
+                                    href="mailto:Niftiumllc@gmail.com"
+                                    className="border border-gray-400 hover:border-blue-400 px-8 py-3 rounded-full text-white/90 text-center transition"
+                                >
+                                    Email: Niftiumllc@gmail.com
                                 </a>
                             </div>
                         </div>
@@ -352,7 +358,7 @@ const Home = () => {
                                 }}
                                 className="md:col-span-3 col-span-1 rounded-3xl overflow-hidden bg-gray-800 border border-gray-700"
                             >
-                                <div className="relative h-full p-6 md:p-8 flex flex-col gap-6">
+                                <div className="relative h-full p-4 md:p-6 flex flex-col gap-6">
 
                                     <div className="absolute -top-10 -right-10 w-56 h-56 rounded-full bg-blue-500/10 blur-3xl pointer-events-none"></div>
 
@@ -375,18 +381,26 @@ const Home = () => {
                                             </p>
                                         </div>
 
-                                        <div className="flex flex-col sm:flex-row gap-3 mt-2">
-                                            <Link
-                                                to="/services"
-                                                className="bg-blue-500 px-4 py-2 rounded-full font-semibold shadow hover:bg-blue-600 text-center"
-                                            >
-                                                View All Services
-                                            </Link>
+                                        <Link
+                                            to="/services"
+                                            className="bg-blue-500 px-4 py-2 rounded-full font-semibold shadow hover:bg-blue-600 text-center"
+                                        >
+                                            View All Services
+                                        </Link>
+
+                                        <div className="flex flex-col sm:flex-row w-full gap-3 mt-">
+
                                             <a
                                                 href="tel:5139152419"
-                                                className="px-4 py-2 rounded-full border border-gray-600 text-gray-200 hover:bg-gray-700 text-center"
+                                                className="px-4 py-2 rounded-full border w-full border-gray-600 text-gray-200 hover:bg-gray-700 text-center"
                                             >
                                                 Call: 513-915-2419
+                                            </a>
+                                            <a
+                                                href="mailto:Niftiumllc@gmail.com"
+                                                className="px-4 py-2 rounded-full border w-full border-gray-600 text-gray-200 hover:bg-gray-700 text-center"
+                                            >
+                                                Email: Niftiumllc@gmail.com
                                             </a>
                                         </div>
                                     </div>

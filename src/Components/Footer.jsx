@@ -3,6 +3,7 @@ import { FaArrowUp, FaPhone, FaLocationDot, } from "react-icons/fa6";
 // import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import logo from "../Images/Logo2.png";
+import { FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   const [showTop, setShowTop] = useState(false);
@@ -57,6 +58,9 @@ const Footer = () => {
             >
               <div className="flex items-center gap-2 text-blue-400">
                 <FaPhone /> <span>513-915-2419</span>
+              </div>
+              <div className="flex items-center gap-2 text-blue-400">
+                <FaEnvelope /> <span>Niftiumllc@gmail.com</span>
               </div>
               <div className="flex items-center gap-2 text-blue-400">
                 <FaLocationDot /> <span>Ohio • Kentucky • Indiana</span>
