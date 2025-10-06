@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaArrowUp, FaFacebookF, FaInstagram, FaPhone, FaLocationDot, FaXTwitter } from "react-icons/fa6";
+import { FaArrowUp, FaPhone, FaLocationDot, } from "react-icons/fa6";
 // import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import logo from "../Images/Logo2.png";
@@ -33,7 +33,7 @@ const Footer = () => {
               Trusted electrical and handyman services across the Tri-State Area. Licensed & insured. Fast, reliable, and professional.
             </p>
 
-            {/* Social icons */}
+            {/* Social icons
             <div className="flex gap-4 mt-6 justify-center md:justify-start">
               {[FaFacebookF, FaXTwitter, FaInstagram].map((Icon, i) => (
                 <motion.a
@@ -45,7 +45,7 @@ const Footer = () => {
                   <Icon size={18} />
                 </motion.a>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Contact info cards */}

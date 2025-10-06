@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { FaLocationDot, FaXTwitter } from 'react-icons/fa6';
-import { FaBars, FaFacebookF, FaInstagram, FaPhone, FaTimes } from 'react-icons/fa';
+import { FaLocationDot } from 'react-icons/fa6';
+import { FaBars, FaPhone, FaTimes } from 'react-icons/fa';
 import logo from "../Images/Logo2.png";
 import { Link, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from "framer-motion";
@@ -33,11 +33,11 @@ const Navbar = () => {
                     <span>Serving Ohio • Kentucky • Indiana</span>
                 </div>
                 <div className="flex items-center gap-5">
-                    <div className="hidden sm:flex items-center gap-4">
+                    {/* <div className="hidden sm:flex items-center gap-4">
                         <a aria-label="Facebook" href="/" className="hover:opacity-90"><FaFacebookF /></a>
                         <a aria-label="X / Twitter" href="/" className="hover:opacity-90"><FaXTwitter /></a>
                         <a aria-label="Instagram" href="/" className="hover:opacity-90"><FaInstagram /></a>
-                    </div>
+                    </div> */}
                     <div className="flex items-center gap-2">
                         <FaPhone />
                         <a className="underline" href="tel:5139152419">513-915-2419</a>
