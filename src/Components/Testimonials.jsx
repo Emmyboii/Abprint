@@ -55,7 +55,7 @@ const Testimonials = () => {
             role: "Landlord — Lexington, KY",
             comment:
                 "Reliable, neat, and affordable. My tenants had power issues and Niftium resolved them same-day. Absolutely stellar experience.",
-            rating: 5,
+            rating: 4,
             avatar: "https://randomuser.me/api/portraits/women/68.jpg",
         },
     ];
