@@ -19,15 +19,15 @@ const Testimonials = () => {
 
     const testimonials = [
         {
-            name: "Sarah Mitchell",
+            name: "Jessica Reynolds",
             role: "Homeowner — Cincinnati, OH",
             comment:
                 "Niftium completely transformed our lighting setup. Every fixture was installed with care and precision — the attention to detail blew me away!",
-            rating: 5,
+            rating: 4,
             avatar: "https://randomuser.me/api/portraits/women/44.jpg",
         },
         {
-            name: "James Carter",
+            name: "Michael Davenport",
             role: "Property Manager — Louisville, KY",
             comment:
                 "They diagnosed and fixed a wiring fault in less than an hour. Professional, responsive, and extremely tidy work.",
@@ -35,7 +35,7 @@ const Testimonials = () => {
             avatar: "https://randomuser.me/api/portraits/men/32.jpg",
         },
         {
-            name: "Lydia Brown",
+            name: "Alyssa Cooper",
             role: "Homeowner — Indianapolis, IN",
             comment:
                 "The team installed our new oven circuit perfectly. Courteous and clearly experienced — I’ll definitely hire them again.",
@@ -43,15 +43,15 @@ const Testimonials = () => {
             avatar: "https://randomuser.me/api/portraits/women/55.jpg",
         },
         {
-            name: "David Lee",
+            name: "Daniel Peterson",
             role: "Facility Supervisor — Dayton, OH",
             comment:
                 "Their quick response saved us from a complete power outage at our workshop. Exceptional service from start to finish.",
-            rating: 5,
+            rating: 3,
             avatar: "https://randomuser.me/api/portraits/men/68.jpg",
         },
         {
-            name: "Emily Stone",
+            name: "Erin Wallace",
             role: "Landlord — Lexington, KY",
             comment:
                 "Reliable, neat, and affordable. My tenants had power issues and Niftium resolved them same-day. Absolutely stellar experience.",
@@ -59,6 +59,7 @@ const Testimonials = () => {
             avatar: "https://randomuser.me/api/portraits/women/68.jpg",
         },
     ];
+
 
     return (
         <div>
