@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaBolt, FaClock, FaCogs, FaHandshake, FaHandsHelping, FaRocket, FaShieldAlt } from "react-icons/fa";
-import electrician from "../Images/NIFTIUM.jpg";
+import NIFTIUM from "../Images/NIFTIUM.jpg";
 import aboutTeam from "../Images/electricians working.jpeg";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
@@ -110,7 +110,7 @@ const WhoWeAreSection = () => {
 
             {/* Background image */}
             <img
-                src={electrician}
+                src={NIFTIUM}
                 alt="Our team at work"
                 className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none"
             />

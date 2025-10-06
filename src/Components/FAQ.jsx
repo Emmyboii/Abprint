@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import NIFTIUM from "../Images/NIFTIUM.jpg";
 
 const faqs = [
   {
@@ -36,6 +37,13 @@ export default function FAQ() {
 
   return (
     <section className="relative py-32 px-6 md:px-24 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
+
+      <img
+        src={NIFTIUM}
+        alt="Our team at work"
+        className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none"
+      />
+      
       {/* Section Header */}
       <motion.div
         className="text-center mb-24 relative z-10"
@@ -59,9 +67,8 @@ export default function FAQ() {
           return (
             <motion.div
               key={idx}
-              className={`relative flex flex-col md:flex-row items-center mb-16 md:mb-24 ${
-                isLeft ? "md:flex-row-reverse" : ""
-              }`}
+              className={`relative flex flex-col md:flex-row items-center mb-16 md:mb-24 ${isLeft ? "md:flex-row-reverse" : ""
+                }`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: idx * 0.2 }}

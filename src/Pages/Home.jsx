@@ -1,5 +1,6 @@
 // src/Pages/Home.jsx
 import { useEffect, useRef, useState } from "react";
+import NIFTIUM from "../Images/NIFTIUM.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -252,6 +253,12 @@ const Home = () => {
                     <div className="absolute -top-32 -left-32 w-72 h-72 md:w-96 md:h-96 bg-blue-500/20 rounded-full filter blur-3xl animate-pulse-slow pointer-events-none"></div>
                     <div className="absolute -bottom-40 -right-40 w-72 h-72 md:w-96 md:h-96 bg-gray-700/20 rounded-full filter blur-3xl animate-pulse-slow pointer-events-none"></div>
                     <div className="absolute top-1/2 left-1/2 w-72 h-72 md:w-[600px] md:h-[600px] bg-gradient-to-r from-blue-500/10 to-gray-700/10 rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+
+                    <img
+                        src={NIFTIUM}
+                        alt="Our team at work"
+                        className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none"
+                    />
 
                     <div className="relative flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
                         {/* Image */}
