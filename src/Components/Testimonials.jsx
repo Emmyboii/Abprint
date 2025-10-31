@@ -1,143 +1,134 @@
-import { FaQuoteLeft, FaStar } from 'react-icons/fa'
 import { motion } from "framer-motion";
+import { FaStar } from "react-icons/fa";
 
-const cardVariants = {
-    hidden: { opacity: 0, y: 40, scale: 0.95 },
-    visible: (i) => ({
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        transition: {
-            delay: i * 0.15,
-            duration: 0.6,
-            ease: "easeOut",
-        },
-    }),
-};
+const testimonials = [
+  {
+    name: "Jessica Reynolds",
+    role: "Brand Owner — Cincinnati, OH",
+    comment:
+      "Abprint elevated our packaging beyond expectation. The detail, color precision, and finish quality were industry-level perfection.",
+    rating: 5,
+    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+  },
+  {
+    name: "Michael Davenport",
+    role: "Event Director — Louisville, KY",
+    comment:
+      "They turned our chaotic event branding into a visual masterpiece — fast, bold, and beautifully printed. Absolutely stellar.",
+    rating: 5,
+    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+  },
+  {
+    name: "Alyssa Cooper",
+    role: "Creative Designer — Indianapolis, IN",
+    comment:
+      "I was blown away by the print sharpness. Abprint’s consistency in color and quality gives my brand a professional edge.",
+    rating: 5,
+    avatar: "https://randomuser.me/api/portraits/women/55.jpg",
+  },
+  {
+    name: "Daniel Peterson",
+    role: "Product Manager — Dayton, OH",
+    comment:
+      "Professional, prompt, and precise. The banners and cards came out immaculate — their craftsmanship shows in every inch.",
+    rating: 4,
+    avatar: "https://randomuser.me/api/portraits/men/68.jpg",
+  },
+];
 
-const Testimonials = () => {
+export default function Testimonials() {
+  return (
+    <section className="relative bg-[#0d1117] text-white py-28 overflow-hidden">
+      {/* Soft ambient glow */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[180px]" />
+        <div className="absolute bottom-0 left-0 w-[350px] h-[350px] bg-blue-700/10 blur-[150px]" />
+      </div>
 
-    const testimonials = [
-        {
-            name: "Jessica Reynolds",
-            role: "Homeowner — Cincinnati, OH",
-            comment:
-                "Niftium completely transformed our lighting setup. Every fixture was installed with care and precision — the attention to detail blew me away!",
-            rating: 4,
-            avatar: "https://randomuser.me/api/portraits/women/44.jpg",
-        },
-        {
-            name: "Michael Davenport",
-            role: "Property Manager — Louisville, KY",
-            comment:
-                "They diagnosed and fixed a wiring fault in less than an hour. Professional, responsive, and extremely tidy work.",
-            rating: 5,
-            avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-        },
-        {
-            name: "Alyssa Cooper",
-            role: "Homeowner — Indianapolis, IN",
-            comment:
-                "The team installed our new oven circuit perfectly. Courteous and clearly experienced — I’ll definitely hire them again.",
-            rating: 5,
-            avatar: "https://randomuser.me/api/portraits/women/55.jpg",
-        },
-        {
-            name: "Daniel Peterson",
-            role: "Facility Supervisor — Dayton, OH",
-            comment:
-                "Their quick response saved us from a complete power outage at our workshop. Exceptional service from start to finish.",
-            rating: 3,
-            avatar: "https://randomuser.me/api/portraits/men/68.jpg",
-        },
-        {
-            name: "Erin Wallace",
-            role: "Landlord — Lexington, KY",
-            comment:
-                "Reliable, neat, and affordable. My tenants had power issues and Niftium resolved them same-day. Absolutely stellar experience.",
-            rating: 4,
-            avatar: "https://randomuser.me/api/portraits/women/68.jpg",
-        },
-    ];
-
-
-    return (
-        <div>
-            {/* Testimonials carousel — distinctive card style */}
-            <section
-                className="relative py-24 px-6 md:px-16 bg-gradient-to-b from-gray-900 to-gray-800 text-white overflow-hidden"
-                id="testimonials"
-            >
-                {/* blue ambient glow */}
-                <div className="absolute inset-0 -z-10 overflow-hidden">
-                    <div className="absolute -top-24 -left-24 w-[420px] h-[420px] bg-blue-500/10 blur-3xl rounded-full" />
-                    <div className="absolute bottom-0 right-0 w-[480px] h-[480px] bg-blue-500/10 blur-3xl rounded-full" />
-                </div>
-
-                <div className="max-w-7xl mx-auto text-center mb-16">
-                    <h3 className="text-3xl md:text-4xl font-bold mb-4">
-                        What Our Clients Say
-                    </h3>
-                    <p className="text-gray-400 max-w-2xl mx-auto">
-                        Genuine stories from our customers across Ohio, Kentucky, and
-                        Indiana — built on trust, quality, and precision.
-                    </p>
-                </div>
-
-                {/* Testimonial cards grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 place-items-center">
-                    {testimonials.map((t, i) => (
-                        <motion.div
-                            key={i}
-                            custom={i}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true, amount: 0.2 }}
-                            variants={cardVariants}
-                            className="relative max-w-xs w-full bg-gradient-to-br from-gray-800/70 to-gray-700/60 backdrop-blur-md border border-gray-700/70 rounded-3xl shadow-[0_0_25px_rgba(59,130,246,0.15)] hover:shadow-[0_0_45px_rgba(59,130,246,0.25)] hover:-translate-y-2 transition-all duration-500 p-8 text-left"
-                        >
-                            {/* quote icon */}
-                            <div className="absolute -top-5 left-6 w-10 h-10 rounded-full bg-gray-800/80 flex items-center justify-center border border-gray-700 shadow-md">
-                                <FaQuoteLeft className="text-blue-500 text-lg" />
-                            </div>
-
-                            {/* avatar */}
-                            <div className="flex items-center gap-4 mb-5">
-                                <img
-                                    src={t.avatar}
-                                    alt={t.name}
-                                    className="w-14 h-14 rounded-full object-cover border border-gray-600"
-                                />
-                                <div>
-                                    <div className="font-semibold text-white">{t.name}</div>
-                                    <div className="text-sm text-gray-400">{t.role}</div>
-                                </div>
-                            </div>
-
-                            {/* comment */}
-                            <p className="text-gray-200 italic leading-relaxed mb-4">
-                                “{t.comment}”
-                            </p>
-
-                            {/* stars */}
-                            <div className="flex gap-1 mb-3">
-                                {Array.from({ length: 5 }).map((_, j) => (
-                                    <FaStar
-                                        key={j}
-                                        className={`text-sm ${j < t.rating ? "text-blue-500" : "text-gray-600"
-                                            }`}
-                                    />
-                                ))}
-                            </div>
-
-                            {/* decorative glow line */}
-                            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-2/3 h-[2px] bg-gradient-to-r from-transparent via-blue-500/40 to-transparent blur-sm" />
-                        </motion.div>
-                    ))}
-                </div>
-            </section>
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
+        {/* Header */}
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
+            Voices Behind <span className="text-blue-500">Precision</span>
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+            What our partners say about the print experience that defines Abprint — quality, detail, and reliability in every finish.
+          </p>
         </div>
-    )
-}
 
-export default Testimonials
+        {/* Grid — staggered card layout */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 relative">
+          {testimonials.map((t, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.15, duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="relative group bg-gradient-to-br from-gray-900/60 to-gray-800/70 border border-gray-700/50 rounded-3xl p-8 backdrop-blur-sm shadow-lg hover:shadow-blue-500/30 transition-all duration-700 overflow-hidden"
+            >
+              {/* Blue glow accent */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-blue-600/10 to-transparent transition duration-700" />
+
+              {/* Reflection line */}
+              <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
+
+              {/* Avatar and name */}
+              <div className="flex items-center gap-4 mb-6 relative z-10">
+                <img
+                  src={t.avatar}
+                  alt={t.name}
+                  className="w-14 h-14 rounded-full border-2 border-blue-500/40 object-cover"
+                />
+                <div>
+                  <h3 className="font-semibold text-lg">{t.name}</h3>
+                  <p className="text-gray-400 text-sm">{t.role}</p>
+                </div>
+              </div>
+
+              {/* Comment */}
+              <p className="text-gray-300 italic relative z-10 leading-relaxed mb-6">
+                “{t.comment}”
+              </p>
+
+              {/* Rating */}
+              <div className="flex gap-1 relative z-10">
+                {Array.from({ length: 5 }).map((_, j) => (
+                  <FaStar
+                    key={j}
+                    className={`text-sm ${
+                      j < t.rating ? "text-blue-400" : "text-gray-600"
+                    }`}
+                  />
+                ))}
+              </div>
+
+              {/* Subtle bottom reflection */}
+              <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Bottom Call to Action */}
+        <div className="text-center mt-24">
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-3xl font-semibold mb-4"
+          >
+            Your story deserves to be seen — and printed.
+          </motion.h3>
+          <motion.a
+            href="/contact"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-block bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-full font-semibold transition-all shadow-lg hover:shadow-blue-500/40"
+          >
+            Share Your Experience
+          </motion.a>
+        </div>
+      </div>
+    </section>
+  );
+}
