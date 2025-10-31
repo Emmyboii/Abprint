@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 
 const Map = () => {
   return (
-    <section className="relative py-28 bg-[#0b0e13] overflow-hidden text-white">
+    <section id="map" className="relative py-28 bg-[#0b0e13] overflow-hidden text-white">
       {/* Background glows */}
       <div className="absolute -top-40 left-1/3 w-[500px] h-[500px] bg-blue-500/10 blur-[160px] rounded-full"></div>
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-400/10 blur-[180px] rounded-full"></div>
@@ -24,7 +24,7 @@ const Map = () => {
 
       {/* Section Header */}
       <div className="text-center mb-16 relative z-10 px-6">
-        <h2 className="text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600">
+        <h2 className="sm:text-4xl text-3xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600">
           Visit Our Creative Hub
         </h2>
         <p className="text-gray-300 mt-3 max-w-2xl mx-auto">
@@ -70,7 +70,7 @@ const Map = () => {
           className="backdrop-blur-lg bg-white/5 border border-white/10 rounded-3xl shadow-xl p-10 relative overflow-hidden"
         >
           <div className="absolute -top-24 -right-24 w-72 h-72 bg-blue-500/10 blur-[120px] rounded-full"></div>
-          <h3 className="text-2xl font-bold mb-4 text-blue-400">
+          <h3 className="sm:text-2xl text-xl font-bold mb-4 text-blue-400">
             Abprint Studio Location
           </h3>
           <p className="text-gray-300 mb-6 leading-relaxed">
@@ -81,15 +81,19 @@ const Map = () => {
           <ul className="space-y-3 text-gray-300">
             <li className="flex items-center gap-3">
               <FaMapMarkerAlt className="text-blue-400 text-lg" />
-              23 Adekunle Street, Igbobi, Lagos, Nigeria
+              12, Morocco Road, Igbobi Lagos, Nigeria
             </li>
             <li className="flex items-center gap-3">
               <FaPhoneAlt className="text-blue-400 text-lg" />
-              +234 806 123 4567
+              +234 811 267 2942
+            </li>
+            <li className="flex items-center gap-3">
+              <FaWhatsapp className="text-blue-400 text-lg" />
+              +234 708 320 0446
             </li>
             <li className="flex items-center gap-3">
               <FaEnvelope className="text-blue-400 text-lg" />
-              hello@abprint.ng
+              abprint6@gmail.com
             </li>
           </ul>
 
@@ -101,7 +105,7 @@ const Map = () => {
               Get Directions
             </Link>
             <a
-              href="tel:+2348061234567"
+              href="tel:08112672942"
               className="border border-blue-400 px-6 py-3 rounded-full font-semibold text-gray-200 hover:bg-blue-500/10 transition"
             >
               Call Now

@@ -1,5 +1,4 @@
 // src/Pages/Home.jsx
-import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -26,9 +25,9 @@ import Navbar from "../Components/Navbar";
 import Testimonials from "../Components/Testimonials";
 import Map from "../Components/Map";
 import FAQ from "../Components/FAQ";
+import Ab from "../Images/AbLogo.png";
 
 const Home = () => {
-    const featuredRef = useRef(null);
 
     const services = [
         {
@@ -119,7 +118,7 @@ const Home = () => {
                         transition={{ duration: 1.2 }}
                         className="relative z-10 text-center px-6 md:px-12"
                     >
-                        <h1 className="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">
+                        <h1 className="sm:text-5xl text-4xl md:text-7xl font-extrabold mb-4 leading-tight">
                             We Don’t Just Print,
                             <br />
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#60A5FA] via-[#93C5FD] to-[#1E40AF] drop-shadow-lg">
@@ -284,6 +283,15 @@ const Home = () => {
 
                 {/* Why Choose Us Section */}
                 <section className="relative py-28 bg-white overflow-hidden">
+
+                    {/* Background Texture */}
+                    <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_#1e3a8a_0%,_transparent_70%)]" />
+                    <img
+                        src={Ab}
+                        alt="Texture"
+                        className="absolute inset-0 w-full h-full object-cover bg-repeat opacity-15"
+                    />
+
                     {/* Decorative abstract lines */}
                     <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.05),transparent_60%)]"></div>
 
@@ -354,7 +362,7 @@ const Home = () => {
                     </div>
                 </section>
 
-                <section className="relative py-28 bg-gradient-to-b from-white via-blue-50/20 to-white text-gray-800 overflow-hidden">
+                <section className="relative py-28 bg-gradient-to-b from-white/40 via-blue-50/20 to-white/80 text-gray-800 overflow-hidden">
                     {/* Floating blobs */}
                     <div className="absolute top-0 left-0 w-96 h-96 bg-pink-200/40 rounded-full blur-3xl -z-10"></div>
                     <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-200/30 rounded-full blur-3xl -z-10"></div>
@@ -368,7 +376,7 @@ const Home = () => {
                             className="text-center mb-16"
                         >
                             <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
-                                Our Services — <span className="text-blue-600">Designed to Impress</span>
+                                Our Services <span className="text-blue-600">Designed to Impress</span>
                             </h2>
                             <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg">
                                 Explore how Abprint transforms creativity into print. From digital design to tactile perfection, we make your vision tangible.
@@ -426,7 +434,7 @@ const Home = () => {
                             initial={{ scale: 0.9, opacity: 0 }}
                             whileInView={{ scale: 1, opacity: 1 }}
                             transition={{ duration: 0.7 }}
-                            className="mt-24 bg-gradient-to-r from-blue-600 to-pink-500 text-white rounded-3xl shadow-2xl p-10 text-center"
+                            className="mt-24 bg-gradient-to-r from-blue-600 to-gray-500 text-white rounded-3xl shadow-2xl p-10 text-center"
                         >
                             <h3 className="text-2xl md:text-3xl font-bold mb-3">
                                 Let’s Bring Your Brand to Life

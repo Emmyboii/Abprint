@@ -117,7 +117,7 @@ export default function Testimonials() {
             transition={{ duration: 0.5 }}
             className="text-3xl font-semibold mb-4"
           >
-            Your story deserves to be seen — and printed.
+            Your story deserves to be seen and printed.
           </motion.h3>
           <motion.a
             href="/contact"

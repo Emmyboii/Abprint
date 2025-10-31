@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { FaBars, FaPhone, FaTimes } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../Images/AbLogo.png";
+import logo from "../Images/AbLogo2.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,6 +18,7 @@ const Navbar = () => {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
+    { name: "Portfolio", path: "/portfolio" },
     { name: "Services", path: "/services" },
     { name: "Contact", path: "/contact" },
   ];
@@ -25,20 +26,20 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 w-full z-50 font-sans backdrop-blur-md bg-white/80 border-b border-blue-100 shadow-sm">
       {/* Top bar */}
-      <div className="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 text-white text-xs sm:text-sm px-4 md:px-20 py-2 flex justify-between items-center">
+      <div className="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 text-white text-xs sm:text-sm px-4 md:px-20 py-2 flex sk:flex-row flex-col gap-2 sk:gap-0 justify-between items-center">
         <span className="tracking-wide">
           ✦ Your Partner in Print, Design & Branding Excellence
         </span>
         <a
-          href="tel:5139152419"
+          href="tel:08112672942"
           className="flex items-center gap-2 hover:text-gray-200 transition"
         >
-          <FaPhone /> 513-915-2419
+          <FaPhone /> +234 811 267 2942
         </a>
       </div>
 
       {/* Main navbar */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-20 py-3 flex items-center justify-between">
+      <div className="max-w-[1400px] mx-auto px-6 mq:px-20 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
           <img
@@ -53,7 +54,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center gap-10 text-gray-700 font-medium">
+        <nav className="hidden mz:flex items-center gap-10 text-gray-700 font-medium">
           {navItems.map((item, idx) => {
             const active = location.pathname === item.path;
             return (
@@ -87,7 +88,7 @@ const Navbar = () => {
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden p-2 text-gray-700"
+          className="mz:hidden p-2 text-gray-700"
         >
           {menuOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
         </button>
@@ -100,7 +101,7 @@ const Navbar = () => {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.4 }}
-              className="absolute top-full left-0 w-full bg-white shadow-md overflow-hidden md:hidden"
+              className="absolute top-full left-0 w-full bg-white shadow-md overflow-hidden mz:hidden"
             >
               <ul className="flex flex-col text-gray-800 text-base px-6 py-4 space-y-2">
                 {navItems.map((item, idx) => (

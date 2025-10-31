@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import Services from "./Pages/Services";
 import ScrollToTop from "./Components/ScrollToTop";
 import Contact from "./Pages/Contact";
+import Portfolio from "./Pages/Portfolio";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
     </div>
   );

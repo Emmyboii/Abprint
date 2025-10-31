@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FaArrowUp, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import logo from "../Images/Logo2.png";
+import logo from "../Images/AbLogo2.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [showTop, setShowTop] = useState(false);
@@ -68,18 +69,22 @@ const Footer = () => {
           >
             <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
-              {["Home", "About Us", "Services", "Portfolio", "Contact"].map(
-                (item, idx) => (
-                  <li key={idx}>
-                    <a
-                      href="/"
-                      className="hover:text-blue-400 transition-colors duration-300"
-                    >
-                      {item}
-                    </a>
-                  </li>
-                )
-              )}
+              {[
+                { name: "Home", path: "/" },
+                { name: "About Us", path: "/about" },
+                { name: "Services", path: "/services" },
+                { name: "Portfolio", path: "/portfolio" },
+                { name: "Contact", path: "/contact" },
+              ].map((link, idx) => (
+                <li key={idx}>
+                  <Link
+                    to={link.path}
+                    className="hover:text-blue-400 transition-colors duration-300"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </motion.div>
 
@@ -93,19 +98,19 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white mb-4">Get in Touch</h3>
             <ul className="space-y-3 text-gray-400 text-sm">
               <li className="flex items-center gap-2">
-                <FaPhoneAlt className="text-blue-400" /> +234 806 123 4567
+                <FaPhoneAlt className="text-blue-400" /> +234 811 267 2942
               </li>
               <li className="flex items-center gap-2">
-                <FaEnvelope className="text-blue-400" /> hello@abprint.ng
+                <FaEnvelope className="text-blue-400" /> abprint6@gmail.com
               </li>
               <li className="flex items-start gap-2">
                 <FaMapMarkerAlt className="text-blue-400 mt-1" />
-                23 Adekunle Street, Igbobi, Lagos, Nigeria
+                12, Morocco Road, Igbobi Lagos, Nigeria
               </li>
             </ul>
 
             {/* Subscribe */}
-            <div className="mt-6">
+            {/* <div className="mt-6">
               <form className="flex gap-2">
                 <input
                   type="email"
@@ -119,7 +124,7 @@ const Footer = () => {
                   Join
                 </button>
               </form>
-            </div>
+            </div> */}
           </motion.div>
         </div>
 
@@ -134,7 +139,7 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           © {new Date().getFullYear()}{" "}
-          <span className="text-blue-400 font-semibold">Abprint</span> — Designed with passion in Lagos.
+          <span className="text-blue-400 font-semibold">Abprint</span> Designed with passion in Lagos.
         </motion.div>
       </div>
 

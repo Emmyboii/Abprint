@@ -4,29 +4,44 @@ import { FaBolt } from "react-icons/fa";
 
 const faqs = [
   {
-    question: "How do I book a service?",
+    question: "How do I start a printing or branding project?",
     answer:
-      "You can book online or call our support line. Select your service, choose a time, and confirm your appointment — it's quick and easy.",
+      "Simply reach out through our contact page or request a quote. We’ll discuss your goals, materials, and timelines to get started quickly.",
   },
   {
-    question: "What areas do you cover?",
+    question: "Can you help with design as well as printing?",
     answer:
-      "We currently serve Ohio, Kentucky, and Indiana. Reach out to verify if we can dispatch a technician to your exact location.",
+      "Absolutely. Our in-house design team can create everything from logos and packaging to complete brand identity systems before production.",
   },
   {
-    question: "Are your technicians licensed?",
+    question: "What types of printing services do you offer?",
     answer:
-      "Absolutely. Every Niftium technician is licensed, insured, and undergoes continual training for safety and quality assurance.",
+      "We specialize in large-format prints, banners, signage, vehicle branding, display systems, and promotional materials — all customizable to your needs.",
   },
   {
-    question: "What payment methods do you accept?",
+    question: "Do you handle both small and bulk orders?",
     answer:
-      "We accept credit/debit cards, PayPal, and secure online payments. Payment is only processed once your service is complete.",
+      "Yes. Whether you need one premium sign or a full-scale print rollout, we scale our production to suit your quantity and quality requirements.",
   },
   {
-    question: "What if I'm not satisfied with the service?",
+    question: "How long does production and delivery take?",
     answer:
-      "Your satisfaction fuels our brand. Contact us within 24 hours and we’ll make it right — guaranteed.",
+      "Turnaround time depends on project complexity, but most orders are completed within 3–7 business days. Rush options are available on request.",
+  },
+  {
+    question: "Can I see a proof before printing?",
+    answer:
+      "Of course. We provide digital proofs or physical samples for approval before moving your project into full production.",
+  },
+  {
+    question: "Do you offer installation services?",
+    answer:
+      "Yes. Our experienced installation team handles everything — from mounting indoor displays to outdoor signage and vehicle wraps.",
+  },
+  {
+    question: "What if I need ongoing branding support?",
+    answer:
+      "We offer long-term partnerships for consistent brand updates, event materials, and reprints — ensuring your visuals always stay fresh and cohesive.",
   },
 ];
 
@@ -50,11 +65,11 @@ export default function FAQ() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-5xl font-extrabold tracking-tight mb-3">
+        <h2 className="sm:text-5xl text-4xl font-extrabold tracking-tight mb-3">
           Got <span className="text-blue-500">Questions?</span>
         </h2>
-        <p className="text-gray-400 text-lg">
-          Explore our electrifyingly clear answers — powered by experience.
+        <p className="text-gray-400 text-lg px-2">
+          Explore our electrifyingly clear answers powered by experience.
         </p>
       </motion.div>
 
@@ -64,11 +79,10 @@ export default function FAQ() {
           <motion.div
             key={i}
             onClick={() => toggle(i)}
-            className={`relative cursor-pointer p-[2px] rounded-3xl overflow-hidden transition-all duration-700 ${
-              openIndex === i
+            className={`relative cursor-pointer p-[2px] rounded-3xl overflow-hidden transition-all duration-700 ${openIndex === i
                 ? "shadow-[0_0_30px_rgba(59,130,246,0.5)]"
                 : "shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:shadow-[0_0_25px_rgba(59,130,246,0.3)]"
-            }`}
+              }`}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.1, duration: 0.6 }}
@@ -85,7 +99,7 @@ export default function FAQ() {
             <div className="relative bg-[#11151b]/90 backdrop-blur-md p-8 rounded-3xl">
               <div className="flex items-center gap-3 mb-3">
                 <FaBolt className="text-blue-500 text-xl" />
-                <h3 className="text-xl font-semibold">{faq.question}</h3>
+                <h3 className="sm:text-xl text-lg font-semibold">{faq.question}</h3>
               </div>
 
               <AnimatePresence>

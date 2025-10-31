@@ -3,66 +3,125 @@ import Footer from '../Components/Footer'
 import Map from '../Components/Map'
 import { motion } from "framer-motion";
 import {
-    FaBolt,
-    FaTools,
-    FaLightbulb,
-    FaPlug,
     FaHandshake,
     FaClock,
-    FaShieldAlt,
+    FaPrint,
+    FaPalette,
+    FaBrush,
+    FaStore,
+    FaBoxOpen,
+    FaTshirt,
+    FaPenNib,
+    FaBolt,
+    FaLightbulb,
+    FaAward,
 } from "react-icons/fa";
 import electricalImg from "../Images/electrical_repair.jpeg";
-import renovationImg from "../Images/handy.jpeg";
-import lightingImg from "../Images/lighting.jpg";
-import applianceImg from "../Images/install.jpeg";
 import Testimonials from '../Components/Testimonials';
 import { Link } from 'react-router-dom';
 import FAQ from '../Components/FAQ';
+import lightGrid from "../Images/light-grid.svg";
+import Ab from "../Images/AbLogo.png";
 
 const Services = () => {
 
+    const HeroServices = [
+        {
+            icon: <FaPrint className="text-pink-400 text-2xl" />,
+            title: "Digital & Offset Printing",
+            desc: "Sharp, vibrant, and consistent prints for any scale of business.",
+        },
+        {
+            icon: <FaPalette className="text-blue-400 text-2xl" />,
+            title: "Brand Identity Design",
+            desc: "We craft logos, color palettes, and visuals that define your brand.",
+        },
+        {
+            icon: <FaBrush className="text-yellow-400 text-2xl" />,
+            title: "Large Format & Signage",
+            desc: "Billboards, banners, vehicle wraps — we make your brand unmissable.",
+        },
+    ];
+
     const services = [
         {
-            title: "Electrical Repairs",
-            desc: "Safe and efficient solutions for residential and commercial electrical needs.",
-            img: electricalImg,
-            icon: <FaBolt className="text-blue-500 text-4xl" />,
+            id: 1,
+            title: "Custom Branding & Logo Design",
+            desc: "We craft timeless brand identities that reflect your mission and capture attention across every medium.",
+            color: "from-blue-500 to-indigo-500",
+            icon: <FaPenNib />,
+            image: "/images/branding.jpg",
         },
         {
-            title: "Handyman & Maintenance",
-            desc: "Reliable handyman services for general home and office maintenance.",
-            img: renovationImg,
-            icon: <FaTools className="text-blue-500 text-4xl" />,
+            id: 2,
+            title: "Premium Print Production",
+            desc: "From business cards to large-format posters — every print is a statement of quality and detail.",
+            color: "from-pink-500 to-rose-500",
+            icon: <FaPrint />,
+            image: "/images/printing.jpg",
         },
         {
-            title: "Lighting Upgrades",
-            desc: "Upgrade your lighting systems for better energy efficiency and aesthetics.",
-            img: lightingImg,
-            icon: <FaLightbulb className="text-blue-500 text-4xl" />,
+            id: 3,
+            title: "Merch & Apparel Printing",
+            desc: "T-shirts, hoodies, tote bags — high-quality prints that bring your brand to life on wearable canvases.",
+            color: "from-yellow-400 to-orange-500",
+            icon: <FaTshirt />,
+            image: "/images/apparel.jpg",
         },
         {
-            title: "Appliance Installation",
-            desc: "Expert installation of electrical appliances to ensure safety and efficiency.",
-            img: applianceImg,
-            icon: <FaPlug className="text-blue-500 text-4xl" />,
+            id: 4,
+            title: "Product & Packaging Design",
+            desc: "Unbox the power of presentation with packaging that enhances your product and amplifies your brand identity.",
+            color: "from-emerald-400 to-teal-500",
+            icon: <FaBoxOpen />,
+            image: "/images/packaging.jpg",
+        },
+        {
+            id: 5,
+            title: "Signage & Outdoor Displays",
+            desc: "Eye-catching banners, store signs, and displays that make your business unforgettable at first glance.",
+            color: "from-purple-500 to-fuchsia-500",
+            icon: <FaStore />,
+            image: "/images/signage.jpg",
         },
     ];
 
     const valueProps = [
         {
-            icon: <FaShieldAlt className="text-blue-500 text-4xl" />,
-            title: "Licensed & Insured",
-            desc: "Certified professionals ensure safety and reliability.",
+            icon: <FaHandshake className="text-blue-600 text-3xl" />,
+            title: "Trusted Collaboration",
+            desc: "We work closely with our clients to bring ideas to reality.",
+            image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80", // handshake/collaboration
         },
         {
-            icon: <FaClock className="text-blue-500 text-4xl" />,
-            title: "Fast & Reliable",
-            desc: "Quick responses and efficient project completion.",
+            icon: <FaAward className="text-gray-500 text-3xl" />,
+            title: "Premium Quality",
+            desc: "Only top-tier materials, inks, and finishes for stunning results.",
+            image: "https://images.unsplash.com/photo-1581091012184-5c8afaa0f42d?auto=format&fit=crop&w=1200&q=80", // printing press close-up
         },
         {
-            icon: <FaHandshake className="text-blue-500 text-4xl" />,
-            title: "Transparent Pricing",
-            desc: "Upfront quotes with no hidden fees.",
+            icon: <FaClock className="text-blue-600 text-3xl" />,
+            title: "Fast Turnaround",
+            desc: "Quick and efficient delivery without compromising excellence.",
+            image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=80", // production workflow/timeliness
+        },
+        {
+            icon: <FaBolt className="text-gray-500 text-3xl" />,
+            title: "Vibrant Printing",
+            desc: "Rich, precise colors that make your brand pop off the page.",
+            image: "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=1200&q=80", // CMYK color printing
+        },
+        {
+            icon: <FaPalette className="text-blue-600 text-3xl" />,
+            title: "Design Expertise",
+            desc: "From logo creation to complete brand identity systems.",
+            image: "https://images.unsplash.com/photo-1581291519195-ef11498d1cf5?auto=format&fit=crop&w=1200&q=80", // designer workspace
+        },
+        {
+            icon: <FaLightbulb className="text-gray-500 text-3xl" />,
+            title: "Creative Strategy",
+            desc: "Helping brands stand out through bold, thoughtful design.",
+            image: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=80", // brainstorming/creative idea
         },
     ];
 
@@ -70,376 +129,434 @@ const Services = () => {
         <div className="font-sans text-gray-800 antialiased">
             <Navbar />
 
-            <section className="relative h-screen overflow-hidden bg-gradient-to-br from-blue-50 via-white to-yellow-50">
-                {/* Left abstract shapes */}
-                <div className="absolute -top-20 -left-20 w-96 h-96 rounded-full bg-yellow-400/30 blur-3xl animate-pulse-slow"></div>
-                <div className="absolute -bottom-32 right-0 w-96 h-96 rounded-full bg-blue-400/20 blur-3xl animate-spin-slow"></div>
+            <section className="relative overflow-hidden flex items-center justify-center py-7 bg-[#0a0f1a]">
+                {/* Subtle glowing gradient background */}
+                <div className="absolute inset-0 bg-gradient-to-b from-[#0d1628] via-[#0a0f1a] to-[#0a0f1a]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(37,99,235,0.15),transparent_70%)]" />
+                <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[160px] rounded-full" />
 
-                <div className="relative max-w-7xl mx-auto h-full flex flex-col mk:flex-row items-center justify-center px-6 mk:px-24">
-
-                    {/* Left: Text + Highlights */}
-                  <motion.div
-                        className="mk:w-1/2 space-y-6 z-10"
+                <div className="relative z-10 grid md:grid-cols-2 gap-16 max-w-7xl mx-auto px-6 md:px-16 items-center">
+                    {/* Left Content */}
+                    <motion.div
                         initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1 }}
+                        className="text-white space-y-8"
                     >
-                        <h1 className="text-4xl md:text-6xl sk:mt-0 mt-12 font-extrabold sm:leading-tight text-gray-900">
-                            Powering <span className="text-yellow-400">Every Space</span> <br className='sk:block hidden' />
-                            with <span className="text-blue-500">Energy & Safety</span>
+                        <h1 className="sm:text-5xl text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+                            Powering <span className="text-blue-500">Your Brand</span> <br className='sm:block hidden' />
+                            with Precision & Impact
                         </h1>
-                        <p className="text-gray-700 text-lg md:text-xl max-w-md">
-                            Niftium Electric delivers smart electrical solutions and handyman services across Ohio, Kentucky, and Indiana. Fast, safe, and reliable.
+
+                        <p className="text-gray-400 text-lg max-w-md leading-relaxed">
+                            We craft exceptional visual and electrical solutions that bring energy, trust, and visibility to every brand.
                         </p>
-                        <div className="flex gap-4 mt-4">
-                            <Link to='/contact'>
-                                <button className="bg-yellow-400 text-gray-900 sm:px-8 px-4 py-3 rounded-full font-semibold hover:scale-105 transition">Get a Quote</button>
+
+                        <div className="flex flex-wrap gap-4">
+                            <Link to="/contact">
+                                <button className="px-8 py-3 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-all shadow-md hover:shadow-blue-500/30">
+                                    Start a Project
+                                </button>
                             </Link>
-                            <a href='#more'>
-                                <button className="border border-blue-500 text-blue-500 sm:px-8 px-4 py-3 rounded-full font-semibold hover:bg-blue-50 transition">Learn More</button>
+                            <a href="#services">
+                                <button className="px-8 py-3 rounded-full border border-blue-400 text-blue-300 hover:bg-blue-500/10 transition">
+                                    View Services
+                                </button>
                             </a>
                         </div>
 
-                        {/* Highlighted service mini-cards integrated in hero */}
-                        <div className="flex flex-col sk:gap-4 gap-2 mt-10">
-                            {services.slice(0, 3).map((s, idx) => (
-                                <motion.div key={idx} className="bg-white/80 backdrop-blur-lg rounded-2xl p-4 shadow-lg flex items-center gap-4 hover:scale-105 transition cursor-pointer"
-                                    initial={{ opacity: 0, y: 30 }}
+                        {/* Small highlight features */}
+                        <div className="grid gap-4 mt-10">
+                            {HeroServices.map((s, idx) => (
+                                <motion.div
+                                    key={idx}
+                                    className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl backdrop-blur-md border border-white/10 hover:scale-[1.02] transition-all"
+                                    initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: idx * 0.2 }}
+                                    transition={{ delay: idx * 0.15 }}
                                 >
-                                    <div className="text-2xl text-blue-500">{s.icon}</div>
+                                    <div className="p-3 bg-blue-500/10 rounded-full text-blue-400">{s.icon}</div>
                                     <div>
-                                        <h4 className="font-bold">{s.title}</h4>
-                                        <p className="text-gray-600 text-sm">{s.desc}</p>
+                                        <h4 className="text-white font-semibold">{s.title}</h4>
+                                        <p className="text-gray-400 text-sm">{s.desc}</p>
                                     </div>
                                 </motion.div>
                             ))}
                         </div>
                     </motion.div>
 
-                    {/* Right: Collage of images */}
+                    {/* Right Visual Composition */}
                     <motion.div
-                        className="mk:w-1/2 relative mt-10 mk:mt-0 flex justify-center items-center"
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, x: 60 }}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1 }}
+                        className="relative flex justify-center items-center"
                     >
-                        {/* Layered images with rotation and shadow */}
-                        <img src={electricalImg} alt="Electrical Repair" className="absolute top-0 right-0 w-64 rounded-3xl shadow-2xl rotate-6" />
-                        <img src={lightingImg} alt="Lighting Upgrade" className="absolute top-16 left-10 w-60 rounded-3xl shadow-2xl -rotate-6" />
-                        <img src={applianceImg} alt="Appliance Installation" className="absolute top-40 right-20 w-64 rounded-3xl shadow-2xl rotate-3" />
+                        {/* Floating image composition */}
+                        <motion.div
+                            className="relative w-[360px] h-[460px] rounded-[2rem] overflow-hidden shadow-2xl border border-blue-500/20"
+                            animate={{ y: [0, -10, 0] }}
+                            transition={{ duration: 6, repeat: Infinity }}
+                        >
+                            <img
+                                src={electricalImg}
+                                alt="Project Showcase"
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] via-transparent" />
+                        </motion.div>
+
+                        {/* Accent frame behind */}
+                        <div className="absolute -bottom-10 -right-10 w-[360px] h-[460px] border-2 border-blue-500/30 rounded-[2rem] rotate-6"></div>
                     </motion.div>
                 </div>
             </section>
 
-            <section id='more' className="relative py-32 px-6 md:px-24 bg-gradient-to-b from-white to-blue-50 overflow-hidden">
-                {/* Section Header */}
+            <section id="services" className="relative py-32 overflow-hidden bg-white">
+
+                {/* Background Texture */}
+                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_#1e3a8a_0%,_transparent_70%)]" />
+                <img
+                    src={Ab}
+                    alt="Texture"
+                    className="absolute inset-0 w-full h-full object-cover bg-repeat opacity-15"
+                />
+
+                {/* Header */}
                 <motion.div
-                    className="text-center mb-32 relative z-10"
-                    initial={{ opacity: 0, y: 50 }}
+                    className="text-center mb-28 relative z-10"
+                    initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="md:text-5xl text-3xl font-extrabold text-gray-800">Explore Our Services</h2>
-                    <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-                        Innovative solutions designed for impact, efficiency, and peace of mind.
+                    <h2 className="sm:text-5xl text-4xl px-2 md:text-[55px] font-extrabold text-gray-900 leading-tight">
+                        Professional <span className="text-blue-600">Branding & Printing</span> Solutions
+                    </h2>
+                    <p className="mt-5 text-gray-600 max-w-2xl px-4 mx-auto text-lg">
+                        Empowering your business with exceptional print and visual identity. Designed to impress, built to last.
                     </p>
                 </motion.div>
 
-                {/* Floating Background Shapes */}
-                <div className="absolute -top-20 -left-20 w-72 h-72 bg-blue-200/30 rounded-full animate-pulse-slow pointer-events-none"></div>
-                <div className="absolute -bottom-28 -right-32 w-96 h-96 bg-yellow-200/30 rounded-full animate-pulse-slower pointer-events-none"></div>
-                <div className="absolute top-1/2 left-1/4 w-60 h-60 bg-purple-200/20 rounded-full animate-spin-slow pointer-events-none"></div>
-
-                {/* Services Flow */}
-                <div className="relative flex flex-col gap-32 z-10">
+                {/* Services — Staggered Cards */}
+                <div className="relative max-w-7xl mx-auto grid gap-20 px-6 md:px-10">
                     {services.map((service, idx) => (
                         <motion.div
                             key={idx}
-                            className="relative flex flex-col md:flex-row items-center gap-12"
+                            className={`relative flex flex-col md:flex-row items-center gap-12 ${idx % 2 !== 0 ? "md:flex-row-reverse" : ""
+                                }`}
                             initial={{ opacity: 0, y: 80 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8, delay: idx * 0.25 }}
-                        >
-                            {/* Dynamic Background Panel */}
-                            <div
-                                className={`absolute inset-0 -z-10 rounded-3xl transform ${idx % 2 === 0 ? "rotate-3 bg-blue-100/50" : "-rotate-3 bg-yellow-100/50"
-                                    }`}
-                            ></div>
-
-                            {/* Image / Visual */}
-                            <div className={`mk:w-1/2 ${idx % 2 !== 0 ? "order-2" : ""} relative`}>
-                                <motion.img
-                                    src={service.img}
-                                    alt={service.title}
-                                    className="w-full rounded-3xl shadow-xl object-cover hover:scale-105 hover:rotate-1 transition-transform duration-500"
-                                />
-                                {/* Floating Icon */}
-                                <motion.div
-                                    className="absolute -top-8 -left-8 text-6xl text-blue-500"
-                                    whileHover={{ scale: 1.3, rotate: 10 }}
-                                    transition={{ type: "spring", stiffness: 120 }}
-                                >
-                                    {service.icon}
-                                </motion.div>
-                            </div>
-
-                            {/* Content Panel with Connector */}
-                            <div className="mk:w-1/2 space-y-6 p-6 relative">
-                                <h3 className="md:text-3xl text-2xl font-bold text-gray-800">{service.title}</h3>
-                                <p className="text-gray-700">{service.desc}</p>
-                                <Link to='/contact'>
-                                    <button className="px-6 py-2 mt-3 rounded-full bg-blue-500 text-white font-semibold hover:bg-blue-600 hover:scale-105 transition transform">
-                                        Request Service
-                                    </button>
-                                </Link>
-
-                                {/* Connector Line */}
-                                <div
-                                    className={`absolute ${idx % 2 === 0 ? "top-10 left-[-40px]" : "top-10 right-[-40px]"
-                                        } w-20 h-1 bg-gradient-to-r from-blue-400 to-yellow-400 rounded-full pointer-events-none`}
-                                ></div>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-            </section>
-
-
-            <section className="relative py-32 px-6 md:px-24 bg-gradient-to-r from-gray-50 to-blue-50 overflow-hidden">
-                {/* Section Header */}
-                <motion.div
-                    className="text-center mb-32 relative z-10"
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                >
-                    <h2 className="md:text-5xl text-3xl font-extrabold text-gray-800">
-                        Why Choose <span className="text-blue-500">Us</span>
-                    </h2>
-                    <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-                        Discover the advantages that set us apart and drive real results.
-                    </p>
-                </motion.div>
-
-                {/* Parallax Flow Container */}
-                <div className="relative flex flex-col gap-48">
-                    {valueProps.map((item, idx) => (
-                        <motion.div
-                            key={idx}
-                            className="relative flex flex-col md:flex-row items-center gap-12"
-                            initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: idx * 0.2 }}
                         >
-                            {/* Floating Icon */}
-                            <motion.div
-                                className={`absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center text-4xl z-20`}
-                                animate={{ y: [0, -12, 0] }}
-                                transition={{ duration: 2, repeat: Infinity, repeatType: "loop", delay: idx * 0.3 }}
-                            >
-                                {item.icon}
-                            </motion.div>
+                            {/* Image block */}
+                            <div className="relative md:w-1/2">
+                                <div className="absolute inset-0 bg-blue-100/40 rounded-3xl blur-2xl -z-10"></div>
+                                <img
+                                    src={service.image}
+                                    alt={service.title}
+                                    className="w-full rounded-3xl shadow-2xl object-cover border border-blue-100"
+                                />
+                            </div>
 
-                            {/* Content Panel */}
-                            <motion.div
-                                className={`md:w-1/2 bg-white/70 backdrop-blur-md rounded-3xl p-10 shadow-xl relative z-10 transform hover:scale-105 transition cursor-pointer`}
-                                whileHover={{ y: -5 }}
-                            >
-                                <h3 className="md:text-2xl text-xl font-bold mb-4 text-center md:text-left">{item.title}</h3>
-                                <p className="text-gray-700 text-center md:text-left">{item.desc}</p>
-                            </motion.div>
-
-                            {/* Connector SVG (curved line to next item) */}
-                            {idx !== valueProps.length - 1 && (
-                                <svg
-                                    className={`absolute w-32 h-32 md:w-48 md:h-48 right-[-64px] top-1/2 transform translate-y-[-50%]`}
-                                    viewBox="0 0 100 100"
-                                    fill="none"
-                                >
-                                    <path
-                                        d="M0,100 C50,0 50,0 100,100"
-                                        stroke="url(#grad)"
-                                        strokeWidth="4"
-                                        fill="transparent"
-                                    />
-                                    <defs>
-                                        <linearGradient id="grad" x1="0" y1="0" x2="100" y2="100">
-                                            <stop offset="0%" stopColor="#3b82f6" />
-                                            <stop offset="100%" stopColor="#facc15" />
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                            )}
+                            {/* Content block */}
+                            <div className="md:w-1/2 space-y-6 bg-white/80 backdrop-blur-md rounded-3xl p-10 shadow-lg border border-blue-100">
+                                <div className="text-blue-500 text-4xl">{service.icon}</div>
+                                <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
+                                <p className="text-gray-600 leading-relaxed">{service.desc}</p>
+                                <Link to="/contact">
+                                    <button className="px-6 py-2 mt-2 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 hover:scale-105 transition">
+                                        Request Service
+                                    </button>
+                                </Link>
+                            </div>
                         </motion.div>
                     ))}
                 </div>
 
-                {/* Floating Background Shapes */}
+                {/* CTA */}
                 <motion.div
-                    className="absolute -top-32 -left-32 w-72 h-72 bg-blue-200/20 rounded-full pointer-events-none"
-                    animate={{ x: [0, 20, -20, 0], y: [0, -20, 20, 0] }}
-                    transition={{ duration: 10, repeat: Infinity, repeatType: "loop" }}
-                ></motion.div>
-                <motion.div
-                    className="absolute -bottom-40 -right-40 w-96 h-96 bg-yellow-200/20 rounded-full pointer-events-none"
-                    animate={{ x: [0, -30, 30, 0], y: [0, 20, -20, 0] }}
-                    transition={{ duration: 12, repeat: Infinity, repeatType: "loop" }}
-                ></motion.div>
+                    className="text-center mt-32"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <p className="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed">
+                        Every project is more than ink and paper — it’s a reflection of your brand’s energy and excellence.
+                    </p>
+                    <Link to="/portfolio">
+                        <button className="mt-10 px-10 py-3 rounded-full z-50 bg-blue-600 text-white font-semibold hover:bg-blue-700 hover:scale-105 transition">
+                            View Our Work
+                        </button>
+                    </Link>
+                </motion.div>
             </section>
 
-            <section className="relative py-32 px-6 md:px-24 bg-gradient-to-b from-white to-blue-50 overflow-hidden">
-                {/* Section Header */}
+            <section
+                id="why-us"
+                className="relative py-40 px-6 md:px-20 bg-gradient-to-b from-white/20 via-blue-50/30 to-white/10 overflow-hidden"
+            >
+                {/* Decorative vertical glow line */}
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[2px] h-full bg-gradient-to-b from-transparent via-blue-300 to-transparent"></div>
+
+                {/* Soft floating light blur */}
+                <div className="absolute -top-40 left-1/3 w-[600px] h-[600px] bg-blue-200/20 blur-3xl rounded-full pointer-events-none"></div>
+
+                {/* Header */}
                 <motion.div
                     className="text-center mb-32 relative z-10"
-                    initial={{ opacity: 0, y: 50 }}
+                    initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="md:text-5xl text-3xl font-extrabold text-gray-800">How It Works</h2>
-                    <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-                        A simple, clear process to get your services done efficiently and safely.
+                    <h2 className="sm:text-5xl text-4xl md:text-6xl px-5 font-extrabold text-gray-900 leading-tight">
+                        Why Clients <span className="text-blue-600">Choose Us</span>
+                    </h2>
+                    <p className="mt-5 text-gray-600 max-w-2xl mx-auto text-lg">
+                        Because every project deserves innovation, precision, and reliability — not just promises.
                     </p>
                 </motion.div>
 
-                {/* Vertical Flow Steps */}
-                <div className="relative flex flex-col items-center gap-24 z-10">
-                    {[
-                        {
-                            icon: "📞",
-                            title: "Book a Service",
-                            desc: "Select your service and schedule an appointment online or via phone.",
-                        },
-                        {
-                            icon: "🛠️",
-                            title: "Professional Execution",
-                            desc: "Our licensed technicians arrive on time and complete your project efficiently.",
-                        },
-                        {
-                            icon: "✅",
-                            title: "Enjoy Results",
-                            desc: "Safe, reliable, and efficient service that keeps your home or office powered up.",
-                        },
-                    ].map((step, idx) => (
+                {/* Value Props Flow */}
+                <div className="relative flex flex-col gap-28 max-w-6xl mx-auto z-10">
+                    {valueProps.map((item, idx) => (
                         <motion.div
                             key={idx}
-                            className={`relative flex flex-col md:flex-row items-center gap-12 w-full max-w-4xl ${idx % 2 !== 0 ? "md:flex-row-reverse" : ""
+                            className={`relative flex flex-col md:flex-row items-center gap-10 ${idx % 2 !== 0 ? "md:flex-row-reverse" : ""
                                 }`}
-                            initial={{ opacity: 0, y: 50 }}
+                            initial={{ opacity: 0, y: 60 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.8, delay: idx * 0.3 }}
+                            transition={{ duration: 0.8, delay: idx * 0.2 }}
                         >
-                            {/* Icon Circle */}
-                            <motion.div
-                                className="flex-shrink-0 md:size-28 size-20 rounded-full bg-yellow-400 flex items-center justify-center text-5xl shadow-lg z-10"
-                                animate={{ y: [0, -10, 0] }}
-                                transition={{ duration: 2, repeat: Infinity }}
-                            >
-                                {step.icon}
-                            </motion.div>
-
-                            {/* Content Panel */}
-                            <div className="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-xl flex-1">
-                                <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
-                                <p className="text-gray-700">{step.desc}</p>
+                            {/* Floating Glass Card */}
+                            <div className="md:w-1/2 relative">
+                                <div className="absolute -inset-2 bg-blue-100/40 blur-2xl rounded-3xl -z-10"></div>
+                                <div className="bg-white/70 backdrop-blur-xl border border-blue-100/40 rounded-3xl p-10 shadow-xl transform hover:-translate-y-1 transition-all">
+                                    <div className="text-blue-600 text-5xl mb-4">{item.icon}</div>
+                                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                                    <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                                </div>
                             </div>
 
-                            {/* Connector Line */}
-                            {idx !== 2 && (
-                                <div
-                                    className={`absolute left-1/2 top-full transform -translate-x-1/2 w-1 h-24 bg-gradient-to-b from-yellow-400 to-blue-400 rounded-full`}
-                                ></div>
-                            )}
+                            {/* Visual Panel */}
+                            <div className="md:w-1/2 relative flex justify-center">
+                                <div className="absolute inset-0 bg-blue-500/10 rounded-3xl blur-3xl -z-10"></div>
+                                <motion.div
+                                    className="relative w-80 h-60 rounded-3xl overflow-hidden shadow-2xl border border-blue-100"
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ type: "spring", stiffness: 120 }}
+                                >
+                                    <img
+                                        src={item.image}
+                                        alt={item.title}
+                                        className="object-cover w-full h-full"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent"></div>
+                                </motion.div>
+                            </div>
+
+                            {/* Subtle connector circle */}
+                            <div className="absolute left-1/2 transform -translate-x-1/2 top-1/2 w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-md"></div>
                         </motion.div>
                     ))}
                 </div>
 
-                {/* Floating Background Shapes */}
+                {/* CTA */}
                 <motion.div
-                    className="absolute -top-32 -left-32 w-72 h-72 bg-blue-200/20 rounded-full pointer-events-none"
-                    animate={{ x: [0, 20, -20, 0], y: [0, -20, 20, 0] }}
-                    transition={{ duration: 10, repeat: Infinity, repeatType: "loop" }}
-                ></motion.div>
+                    className="text-center mt-40"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <p className="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed">
+                        We don’t just deliver results — we build experiences that strengthen your brand and inspire confidence.
+                    </p>
+                    <Link to="/contact">
+                        <button className="mt-10 px-10 py-3 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 hover:scale-105 transition">
+                            Let’s Work Together
+                        </button>
+                    </Link>
+                </motion.div>
+            </section>
+
+            <section className="relative py-32 px-6 md:px-20 bg-gradient-to-br from-white via-blue-50 to-white overflow-hidden">
+                {/* Decorative Grid & Glow */}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_#93c5fd20,_transparent_60%)]"></div>
+
+                {/* Header */}
                 <motion.div
-                    className="absolute -bottom-40 -right-40 w-96 h-96 bg-yellow-200/20 rounded-full pointer-events-none"
-                    animate={{ x: [0, -30, 30, 0], y: [0, 20, -20, 0] }}
-                    transition={{ duration: 12, repeat: Infinity, repeatType: "loop" }}
-                ></motion.div>
+                    className="text-center mb-28 relative z-10"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                >
+                    <h2 className="text-4xl md:text-6xl font-extrabold text-gray-900">
+                        How <span className="text-blue-500">It Works</span>
+                    </h2>
+                    <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">
+                        From concept to completion — we make your printing and branding process seamless, fast, and professional.
+                    </p>
+                </motion.div>
+
+                {/* Modern Horizontal Timeline */}
+                <div className="relative z-10 max-w-6xl mx-auto">
+                    {/* Connecting line */}
+                    <div className="absolute top-1/2 left-0 right-0 h-[3px] bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400 transform -translate-y-1/2"></div>
+
+                    <div className="grid md:grid-cols-3 gap-16 relative">
+                        {[
+                            {
+                                num: "01",
+                                title: "Consult & Plan",
+                                desc: "We start by understanding your goals and vision to craft a tailored branding or print solution.",
+                                icon: "💬",
+                            },
+                            {
+                                num: "02",
+                                title: "Design & Proof",
+                                desc: "Our creative team transforms ideas into visuals — you review proofs and approve before printing.",
+                                icon: "🎨",
+                            },
+                            {
+                                num: "03",
+                                title: "Print & Deliver",
+                                desc: "High-quality production and fast delivery — your brand shines on every surface.",
+                                icon: "🚀",
+                            },
+                        ].map((step, idx) => (
+                            <motion.div
+                                key={idx}
+                                className="relative bg-white/80 backdrop-blur-xl p-10 rounded-3xl shadow-lg border border-blue-100 hover:shadow-blue-200 hover:-translate-y-3 transition duration-500 text-center"
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: idx * 0.2 }}
+                            >
+                                {/* Floating icon */}
+                                <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white w-20 h-20 rounded-full flex items-center justify-center text-4xl shadow-lg">
+                                    {step.icon}
+                                </div>
+
+                                {/* Step number */}
+                                <span className="block text-blue-400 font-bold text-sm tracking-widest mb-2">
+                                    STEP {step.num}
+                                </span>
+
+                                <h3 className="text-2xl font-semibold text-gray-800 mb-3">{step.title}</h3>
+                                <p className="text-gray-600">{step.desc}</p>
+
+                                {/* Accent underline */}
+                                <div className="mt-6 h-[3px] w-16 mx-auto bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"></div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Floating shapes */}
+                <motion.div
+                    className="absolute -bottom-24 -right-24 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl"
+                    animate={{ x: [0, -20, 20, 0], y: [0, 10, -10, 0] }}
+                    transition={{ duration: 12, repeat: Infinity }}
+                />
+                <motion.div
+                    className="absolute -top-32 -left-32 w-64 h-64 bg-blue-300/10 rounded-full blur-3xl"
+                    animate={{ x: [0, 20, -20, 0], y: [0, -10, 10, 0] }}
+                    transition={{ duration: 10, repeat: Infinity }}
+                />
             </section>
 
             <Testimonials />
 
-            <section className="relative py-32 px-6 md:px-24 overflow-hidden bg-gradient-to-r from-blue-600 to-blue-500 text-white">
-                {/* Animated Background Shapes */}
+            <section className="relative py-32 px-6 md:px-20 bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-600 text-white overflow-hidden">
+                {/* Light texture overlay (like paper grain) */}
+                <div
+                    className="absolute inset-0 opacity-[0.06] bg-center bg-cover pointer-events-none"
+                    style={{ backgroundImage: `url(${lightGrid})` }}
+                ></div>
+
+                {/* Floating gradient blobs */}
                 <motion.div
-                    className="absolute -top-32 -left-32 w-72 h-72 bg-yellow-400/20 rounded-full pointer-events-none"
+                    className="absolute -top-32 -left-32 w-80 h-80 bg-pink-400/30 rounded-full mix-blend-screen blur-3xl"
                     animate={{ x: [0, 30, -30, 0], y: [0, -20, 20, 0] }}
+                    transition={{ duration: 10, repeat: Infinity, repeatType: "loop" }}
+                />
+                <motion.div
+                    className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-400/20 rounded-full mix-blend-screen blur-3xl"
+                    animate={{ x: [0, -30, 30, 0], y: [0, 30, -30, 0] }}
                     transition={{ duration: 12, repeat: Infinity, repeatType: "loop" }}
                 />
-                <motion.div
-                    className="absolute -bottom-40 -right-40 w-96 h-96 bg-white/10 rounded-full pointer-events-none"
-                    animate={{ x: [0, -40, 40, 0], y: [0, 30, -30, 0] }}
-                    transition={{ duration: 14, repeat: Infinity, repeatType: "loop" }}
-                />
 
-                {/* Content Container */}
-                <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-24">
-                    {/* Left Text */}
-                    <div className="md:w-1/2 space-y-6">
-                        <motion.h2
-                            className="text-4xl md:text-5xl font-extrabold leading-tight"
-                            initial={{ opacity: 0, x: -50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                        >
-                            Ready to Transform Your Space?
-                        </motion.h2>
-                        <motion.p
-                            className="text-lg max-w-xl"
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                        >
-                            Book a service with Niftium Electric today and experience top-quality electrical solutions tailored to your needs.
-                        </motion.p>
-                        <Link to='/contact'>
-                            <motion.button
-                                className="bg-white text-blue-500 px-8 py-3 mt-4 rounded-full font-semibold shadow-lg hover:shadow-white/40 transition transform hover:scale-105 relative overflow-hidden"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                whileHover={{ scale: 1.05 }}
-                            >
-                                <span className="relative z-10">Book a Service</span>
-                                {/* Glow pulse effect */}
-                                <motion.div
-                                    className="absolute inset-0 bg-white/30 rounded-full blur-xl"
-                                    animate={{ opacity: [0.3, 0.6, 0.3] }}
-                                    transition={{ repeat: Infinity, duration: 2 }}
-                                />
-                            </motion.button>
-                        </Link>
-                    </div>
+                {/* Main content */}
+                <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-16 max-w-7xl mx-auto">
+                    {/* Left: Text */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="space-y-6 md:w-1/2"
+                    >
+                        <h2 className="sm:text-5xl text-4xl md:text-6xl font-extrabold leading-tight">
+                            Let’s Create <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-black/50 to-black/70">
+                                Something Beautiful
+                            </span>
+                        </h2>
 
-                    {/* Right Floating Illustration / Shapes */}
-                    <div className="md:w-1/2 relative flex justify-center items-center">
-                        <motion.div
-                            className="w-64 h-64 bg-white/10 rounded-3xl shadow-lg rotate-12"
-                            animate={{ rotate: [12, -12, 12] }}
-                            transition={{ repeat: Infinity, duration: 8, repeatType: "loop" }}
+                        <p className="text-gray-100 max-w-lg text-lg">
+                            From concept to color — we help brands print, design, and display their
+                            vision with precision and creativity. Every project is a canvas to make
+                            your identity unforgettable.
+                        </p>
+
+                        <div className="flex gap-4 mt-8">
+                            <Link to="/contact">
+                                <button className="px-8 py-3 rounded-full bg-white text-blue-600 font-semibold shadow-lg hover:scale-105 transition-transform">
+                                    Start Your Project
+                                </button>
+                            </Link>
+                            <Link to="/portfolio">
+                                <button className="px-8 py-3 rounded-full border border-white text-white hover:bg-white/10 transition">
+                                    View Our Work
+                                </button>
+                            </Link>
+                        </div>
+                    </motion.div>
+
+                    {/* Right: Creative mockup collage */}
+                    <motion.div
+                        className="relative flex justify-center items-center md:w-1/2"
+                        initial={{ opacity: 0, x: 40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <motion.img
+                            src="/assets/mockup-businesscard.png"
+                            alt="Business Card Mockup"
+                            className="absolute w-60 md:w-72 rounded-2xl shadow-2xl rotate-6 border border-white/10"
+                            animate={{ y: [0, -15, 0] }}
+                            transition={{ duration: 5, repeat: Infinity }}
                         />
-                        <motion.div
-                            className="absolute w-40 h-40 bg-yellow-200/30 rounded-full -top-10 -right-10"
-                            animate={{ y: [0, -10, 0], x: [0, 10, 0] }}
-                            transition={{ repeat: Infinity, duration: 6, repeatType: "loop" }}
+                        <motion.img
+                            src="/assets/mockup-poster.png"
+                            alt="Poster Design"
+                            className="absolute top-24 left-0 w-56 md:w-64 rounded-2xl shadow-2xl -rotate-6 border border-white/10"
+                            animate={{ y: [0, 10, 0] }}
+                            transition={{ duration: 4, repeat: Infinity }}
                         />
-                    </div>
+                        <motion.img
+                            src="/assets/mockup-tshirt.png"
+                            alt="Branded T-shirt"
+                            className="absolute top-48 right-8 w-64 md:w-72 rounded-2xl shadow-2xl rotate-3 border border-white/10"
+                            animate={{ y: [0, -10, 0] }}
+                            transition={{ duration: 6, repeat: Infinity }}
+                        />
+                    </motion.div>
                 </div>
             </section>
+
             <FAQ />
             <Map />
             <Footer />
