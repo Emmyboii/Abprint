@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaBalanceScale, FaBullseye, FaCogs, FaEye, FaFireAlt, FaHandsHelping, FaRocket } from "react-icons/fa";
 import Ab from "../Images/AbLogo.png";
-import aboutTeam from "../Images/electricians working.jpeg";
+import aboutTeam from "../Images/services1.jpg";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Testimonials from "../Components/Testimonials";
@@ -14,7 +14,7 @@ const HeroSection = () => {
             <motion.img
                 src={aboutTeam}
                 alt="Abprint Team"
-                className="absolute inset-0 w-full h-full object-cover opacity-25"
+                className="absolute inset-0 w-full h-full object-cover opacity-40"
                 initial={{ scale: 1.1 }}
                 animate={{ scale: 1 }}
                 transition={{
@@ -149,7 +149,7 @@ const WhoWeAreSection = () => {
             <img
                 src={Ab}
                 alt="Texture"
-                className="absolute inset-0 w-full h-full object-cover opacity-15"
+                className="absolute inset-0 w-full h-full object-cover opacity-10"
             />
 
             {/* Title */}

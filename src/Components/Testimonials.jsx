@@ -1,40 +1,63 @@
 import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
+import tes1 from "../Images/Img6.JPG"
+import tes2 from "../Images/Img7.JPG"
+import tes3 from "../Images/graduate8.JPG"
+import tes4 from "../Images/Img10.JPG"
+import tes5 from "../Images/Img3.JPG"
+import tes6 from "../Images/tes.jpg"
 
 const testimonials = [
   {
-    name: "Jessica Reynolds",
-    role: "Brand Owner — Cincinnati, OH",
+    name: "Chiamaka Okafor",
+    role: "Boutique Owner — Lagos, Nigeria",
     comment:
-      "Abprint elevated our packaging beyond expectation. The detail, color precision, and finish quality were industry-level perfection.",
+      "ABPrint really took my packaging to another level. The print quality and color accuracy were on point — customers now ask where I got them done!",
     rating: 5,
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+    avatar: tes6,
   },
   {
-    name: "Michael Davenport",
-    role: "Event Director — Louisville, KY",
+    name: "Tunde Adeyemi",
+    role: "Event Planner — Abuja, Nigeria",
     comment:
-      "They turned our chaotic event branding into a visual masterpiece — fast, bold, and beautifully printed. Absolutely stellar.",
+      "From banners to souvenirs, everything came out perfect. ABPrint delivered fast, communicated well, and the final results were better than I expected.",
     rating: 5,
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+    avatar: tes1,
   },
   {
-    name: "Alyssa Cooper",
-    role: "Creative Designer — Indianapolis, IN",
+    name: "Aisha Suleiman",
+    role: "Creative Director — Lagos, Nigeria",
     comment:
-      "I was blown away by the print sharpness. Abprint’s consistency in color and quality gives my brand a professional edge.",
-    rating: 5,
-    avatar: "https://randomuser.me/api/portraits/women/55.jpg",
-  },
-  {
-    name: "Daniel Peterson",
-    role: "Product Manager — Dayton, OH",
-    comment:
-      "Professional, prompt, and precise. The banners and cards came out immaculate — their craftsmanship shows in every inch.",
+      "I love how clean and vibrant the prints look. ABPrint is easily one of the most reliable print partners I’ve worked with — consistent every single time.",
     rating: 4,
-    avatar: "https://randomuser.me/api/portraits/men/68.jpg",
+    avatar: tes3,
+  },
+  {
+    name: "Emeka Nwosu",
+    role: "Product Manager — Ogun, Nigeria",
+    comment:
+      "Professional service from start to finish. Our corporate gifts came out sharp, well-packaged, and right on schedule. Highly recommend ABPrint.",
+    rating: 5,
+    avatar: tes2,
+  },
+  {
+    name: "Funmi Balogun",
+    role: "Brand Strategist — Ibadan, Nigeria",
+    comment:
+      "Honestly, I was impressed. ABPrint brought my brand visuals to life with amazing detail. The colors popped perfectly — exactly what I wanted.",
+    rating: 5,
+    avatar: tes4,
+  },
+  {
+    name: "Ifeanyi Eze",
+    role: "Entrepreneur — Lagos, Nigeria",
+    comment:
+      "They handled my business cards and flyers excellently. Everything looked premium and professional. ABPrint definitely understands branding.",
+    rating: 4,
+    avatar: tes5,
   },
 ];
+
 
 export default function Testimonials() {
   return (
@@ -96,9 +119,8 @@ export default function Testimonials() {
                 {Array.from({ length: 5 }).map((_, j) => (
                   <FaStar
                     key={j}
-                    className={`text-sm ${
-                      j < t.rating ? "text-blue-400" : "text-gray-600"
-                    }`}
+                    className={`text-sm ${j < t.rating ? "text-blue-400" : "text-gray-600"
+                      }`}
                   />
                 ))}
               </div>

@@ -2,10 +2,27 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaArrowRight, FaTimes, FaPenNib, FaCogs, FaPrint, FaTruck } from "react-icons/fa";
-import project1 from "../Images/electrician.jpeg";
-import project2 from "../Images/electrician.jpeg";
-import project3 from "../Images/electrician.jpeg";
-import project4 from "../Images/electrician.jpeg";
+import project1 from "../Images/Job1.png";
+import project2 from "../Images/Job2.png";
+import project3 from "../Images/Job3.png";
+import project4 from "../Images/Job4.png";
+import project5 from "../Images/Job5.png";
+import project6 from "../Images/Job6.png";
+import project7 from "../Images/Job7.png";
+import project8 from "../Images/Job8.png";
+import project9 from "../Images/Job9.png";
+import project10 from "../Images/Job10.png";
+import project11 from "../Images/Job11.png";
+import project12 from "../Images/Job12.png";
+import project13 from "../Images/Job13.png";
+import project14 from "../Images/Job14.png";
+import project15 from "../Images/Job15.png";
+import project16 from "../Images/Job16.png";
+import project17 from "../Images/Job17.png";
+import project18 from "../Images/Job18.png";
+import project19 from "../Images/Job19.png";
+import project20 from "../Images/Job20.png";
+import hero from "../Images/services5.jpeg";
 import { useEffect, useRef, useState } from "react";
 import Testimonials from "../Components/Testimonials";
 
@@ -68,28 +85,124 @@ const Marquee = ({ text = "PRINT • BRAND • DESIGN • IDENTITY • SIGNAGE �
 
 const projects = [
     {
-        title: "Luxury Business Cards",
-        desc: "Premium matte finish cards with spot UV gloss — crafted to leave a lasting impression.",
+        title: "Calendar Prints",
+        desc: "Premium matte-finish calendars with vibrant colors and durable paper — designed for corporate and personal use.",
         image: project1,
-        color: "from-blue-600 to-blue-400",
+        color: "from-blue-600 to-cyan-400",
     },
     {
-        title: "Billboard Campaign",
-        desc: "Massive citywide print rollout featuring bold colors and captivating typography.",
-        image: project2,
-        color: "from-pink-500 to-yellow-400",
-    },
-    {
-        title: "Product Packaging",
-        desc: "Custom packaging design that brings identity and shelf presence to life.",
+        title: "Online Meeting Promo",
+        desc: "Eye-catching digital flyer for an online Zoom conference — optimized for social media engagement.",
         image: project3,
-        color: "from-purple-600 to-blue-400",
+        color: "from-purple-600 to-indigo-400",
     },
     {
-        title: "Brand Identity Kit",
-        desc: "From logo to stationery — full brand identity system designed for impact.",
+        title: "Church Convention Poster",
+        desc: "Elegant poster design for a church convention — combining faith, vibrancy, and clarity in layout.",
         image: project4,
-        color: "from-yellow-500 to-orange-400",
+        color: "from-rose-500 to-pink-400",
+    },
+    {
+        title: "Tech Company Flyer",
+        desc: "Modern flyer design for a tech company — sleek, minimal, and visually appealing for digital and print.",
+        image: project5,
+        color: "from-blue-500 to-sky-400",
+    },
+    {
+        title: "Food Banner Design",
+        desc: "Mouth-watering food banner design with rich colors and appetizing layout for restaurant promotion.",
+        image: project6,
+        color: "from-yellow-500 to-red-400",
+    },
+    {
+        title: "App Launch Flyer",
+        desc: "Mobile app marketing flyer — clean, bold, and impactful with strong call-to-action visuals.",
+        image: project7,
+        color: "from-cyan-500 to-blue-400",
+    },
+    {
+        title: "Custom Branded Cup",
+        desc: "Logo-branded mugs for corporate gifts — durable print and professional presentation.",
+        image: project8,
+        color: "from-amber-500 to-orange-400",
+    },
+    {
+        title: "Branded Pens",
+        desc: "Customized pens with engraved brand logos — perfect for events and client giveaways.",
+        image: project9,
+        color: "from-green-500 to-emerald-400",
+    },
+    {
+        title: "Electrical Service Flyer",
+        desc: "Creative e-flyer design for an electrical services company — bold, clear, and professional.",
+        image: project2,
+        color: "from-orange-500 to-yellow-400",
+    },
+    {
+        title: "Branded Tote Bags",
+        desc: "Reusable custom tote bags with vivid prints — ideal for promotions and eco-friendly branding.",
+        image: project10,
+        color: "from-teal-500 to-cyan-400",
+    },
+    {
+        title: "Corporate Umbrella",
+        desc: "High-quality branded umbrellas — practical and stylish for outdoor promotions and events.",
+        image: project11,
+        color: "from-indigo-600 to-sky-400",
+    },
+    {
+        title: "Promotional Banner",
+        desc: "Large-format banner print for outdoor marketing — durable, UV-resistant, and professionally finished.",
+        image: project12,
+        color: "from-pink-500 to-red-400",
+    },
+    {
+        title: "Business Display Banner",
+        desc: "Vibrant business banner designed for storefront display — bold visuals that attract attention.",
+        image: project13,
+        color: "from-fuchsia-500 to-purple-400",
+    },
+    {
+        title: "Event Backdrop Banner",
+        desc: "Custom backdrop banner for photoshoots and events — clean design, high-resolution print.",
+        image: project14,
+        color: "from-yellow-500 to-lime-400",
+    },
+    {
+        title: "Conference Backdrop",
+        desc: "Professional stage backdrop for conferences and corporate events — elegant and brand-aligned.",
+        image: project15,
+        color: "from-sky-500 to-indigo-400",
+    },
+    {
+        title: "Ceremonial Backdrop",
+        desc: "Colorful and elegant backdrop for traditional ceremonies and receptions.",
+        image: project16,
+        color: "from-orange-500 to-red-400",
+    },
+    {
+        title: "Branded Gift Bag",
+        desc: "Custom paper bags with sleek branding — perfect for corporate packaging and retail promotions.",
+        image: project17,
+        color: "from-teal-500 to-emerald-400",
+    },
+    {
+        title: "Customized Notebook",
+        desc: "Personalized notebooks with printed brand identity — great for events, gifts, or corporate branding.",
+        image: project18,
+        color: "from-blue-600 to-indigo-400",
+    },
+    {
+        title: "Church Banner",
+        desc: "Beautifully designed banner for church programs — clean typography with spiritual essence.",
+        image: project19,
+        color: "from-violet-500 to-purple-400",
+    },
+    {
+        title: "Wedding Invitation Flyer",
+        desc: "Elegant and romantic wedding flyer design — blending modern layout with soft, timeless color tones.",
+        image: project20,
+        color: "from-pink-500 to-rose-400",
     },
 ];
 
@@ -102,6 +215,14 @@ const Portfolio = () => {
 
             {/* ===== HERO SECTION ===== */}
             <section className="relative py-40 px-6 md:px-20 overflow-hidden text-center bg-gradient-to-b from-[#0b0e13] via-[#10141c] to-[#0b0e13]">
+
+                {/* Background Texture */}
+                <img
+                    src={hero}
+                    alt="Texture"
+                    className="absolute inset-0 w-full h-full object-cover opacity-5"
+                />
+
                 {/* Floating Glows */}
                 <motion.div
                     className="absolute top-0 left-1/3 w-[500px] h-[500px] bg-blue-500/10 blur-[160px] rounded-full"
@@ -163,7 +284,7 @@ const Portfolio = () => {
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: i * 0.2 }}
-                            className="bg-[#10141c] p-10 rounded-3xl border border-white/10 hover:border-blue-400/40 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-700"
+                            className="bg-[#10141c] p-5 rounded-3xl border border-white/10 hover:border-blue-400/40 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-700"
                         >
                             <div className="text-4xl text-blue-400 mb-4 flex justify-center">
                                 {step.icon}
@@ -198,7 +319,7 @@ const Portfolio = () => {
                             ></div>
                             <div className="absolute bottom-0 p-8 z-10">
                                 <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                                <p className="text-gray-200 mb-4 text-sm md:text-base">
+                                <p className="text-gray-100 mb-4 text-sm md:text-base">
                                     {project.desc}
                                 </p>
                                 <motion.button
@@ -223,7 +344,7 @@ const Portfolio = () => {
                             onClick={() => setSelected(null)}
                         >
                             <motion.div
-                                className="relative max-w-4xl w-full bg-[#0b0e13] rounded-3xl overflow-hidden border border-white/10 shadow-2xl"
+                                className="relative max-w-[600px] w-full bg-[#0b0e13] rounded-3xl overflow-hidden border border-white/10 shadow-2xl"
                                 initial={{ scale: 0.8, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
                                 exit={{ scale: 0.8, opacity: 0 }}
@@ -239,7 +360,7 @@ const Portfolio = () => {
                                 <img
                                     src={selected.image}
                                     alt={selected.title}
-                                    className="w-full h-[500px] object-cover"
+                                    className="w-full h-[500px] object-cove"
                                 />
                                 <div className="p-8">
                                     <h3 className="text-3xl font-bold mb-3">{selected.title}</h3>

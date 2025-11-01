@@ -27,14 +27,10 @@ const Contact = () => {
 
                 {/* Content */}
                 <div className="relative z-10 text-center max-w-4xl mx-auto space-y-8">
-                    <motion.h1
-                        className="text-[34px] ww:text-6xl mk:text-7xl font-extrabold leading-tight"
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                    >
+                    <h1 className="text-[34px] ww:text-6xl mk:text-7xl font-extrabold leading-tight">
                         <span className="text-blue-400">Prints That Speak</span>
                         <br />Designs That Inspire
-                    </motion.h1>
+                    </h1>
                     <p className="text-gray-300 text-lg max-w-2xl mx-auto">
                         From business cards to billboards, Abprint turns your vision into tangible art that captivates and connects.
                     </p>

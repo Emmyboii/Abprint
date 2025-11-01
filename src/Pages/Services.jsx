@@ -16,14 +16,47 @@ import {
     FaLightbulb,
     FaAward,
 } from "react-icons/fa";
-import electricalImg from "../Images/electrical_repair.jpeg";
+import service from "../Images/services.jpeg";
 import Testimonials from '../Components/Testimonials';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import FAQ from '../Components/FAQ';
 import lightGrid from "../Images/light-grid.svg";
 import Ab from "../Images/AbLogo.png";
+import services1 from "../Images/services1.jpg";
+import services2 from "../Images/services2.jpg";
+import services3 from "../Images/services3.jpeg";
+import services4 from "../Images/services4.png";
+import services5 from "../Images/services5.jpeg";
+import why1 from "../Images/why1.jpeg";
+import why2 from "../Images/why2.jpeg";
+import why3 from "../Images/why3.jpeg";
+import why4 from "../Images/why4.webp";
+import why5 from "../Images/why5.jpeg";
+import why6 from "../Images/why6.jpeg";
+import bc from "../Images/bc.jpeg";
+import poster from "../Images/Job6.png";
+import brand from "../Images/services4.png";
+
+import { useEffect } from 'react';
 
 const Services = () => {
+
+    const location = useLocation();
+
+    useEffect(() => {
+        // Check if the URL contains a hash (like #product)
+        if (location.hash) {
+            const element = document.querySelector(location.hash);
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: "smooth", block: "start" });
+                }, 200); // small delay so it runs after animation/DOM mount
+            }
+        } else {
+            // scroll to top if no hash
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    }, [location]);
 
     const HeroServices = [
         {
@@ -46,43 +79,71 @@ const Services = () => {
     const services = [
         {
             id: 1,
-            title: "Custom Branding & Logo Design",
-            desc: "We craft timeless brand identities that reflect your mission and capture attention across every medium.",
-            color: "from-blue-500 to-indigo-500",
-            icon: <FaPenNib />,
-            image: "/images/branding.jpg",
+            title: "Product & Packaging Design",
+            desc: `
+      Your product deserves packaging that does more than just protect — it should sell. 
+      At ABPrint, we design packaging that communicates your brand story, values, and quality from the very first glance. 
+      Whether it’s custom boxes, labels, or wraps, we balance creativity with functionality. 
+      Our designers work closely with you to ensure your packaging not only looks beautiful but is also cost-effective and practical for mass production. 
+      The result? Packaging that delights your customers, strengthens your identity, and keeps your products unforgettable on any shelf.
+    `,
+            icon: <FaBoxOpen />,
+            path: 'product',
+            image: services4,
         },
         {
             id: 2,
             title: "Premium Print Production",
-            desc: "From business cards to large-format posters — every print is a statement of quality and detail.",
-            color: "from-pink-500 to-rose-500",
+            desc: `
+      Print is still one of the strongest ways to make an impression — and we take it seriously. 
+      From small-scale essentials like business cards, brochures, and letterheads to large-format materials like banners and posters, 
+      ABPrint delivers top-tier quality using advanced digital and offset printing technologies. 
+      Our process guarantees sharp resolution, true-to-brand color accuracy, and durable finishes that stand out. 
+      We also provide professional advice on paper type, coating, and finishes to ensure your materials leave a lasting impression.
+    `,
             icon: <FaPrint />,
-            image: "/images/printing.jpg",
+            path: 'premium',
+            image: services2,
         },
         {
             id: 3,
             title: "Merch & Apparel Printing",
-            desc: "T-shirts, hoodies, tote bags — high-quality prints that bring your brand to life on wearable canvases.",
-            color: "from-yellow-400 to-orange-500",
+            desc: `
+      Transform ordinary apparel into walking advertisements for your brand. 
+      We print on T-shirts, polos, hoodies, tote bags, and other wearables using premium techniques such as heat transfer, DTG (Direct to Garment), screen printing, and embroidery. 
+      Whether you’re promoting an event, outfitting your team, or creating resale merchandise, 
+      our goal is to ensure that every print is bold, long-lasting, and comfortable to wear. 
+      At ABPrint, your brand doesn’t just get seen — it gets worn with pride.
+    `,
             icon: <FaTshirt />,
-            image: "/images/apparel.jpg",
+            path: 'merch',
+            image: services3,
         },
         {
             id: 4,
-            title: "Product & Packaging Design",
-            desc: "Unbox the power of presentation with packaging that enhances your product and amplifies your brand identity.",
-            color: "from-emerald-400 to-teal-500",
-            icon: <FaBoxOpen />,
-            image: "/images/packaging.jpg",
+            title: "Custom Branding & Logo Design",
+            desc: `
+      Your logo is the face of your business — it should be memorable, timeless, and instantly recognizable. 
+      We help you build a strong visual identity through thoughtful brand strategy and custom logo design that aligns with your business goals. 
+      From typography to color palette and brand guidelines, our creative team ensures every element works together to communicate trust and professionalism. 
+      Whether you’re launching a new brand or rebranding an existing one, ABPrint provides the creative direction that helps your brand stand out confidently.
+    `,
+            icon: <FaPenNib />,
+            path: 'custom',
+            image: services1,
         },
         {
             id: 5,
             title: "Signage & Outdoor Displays",
-            desc: "Eye-catching banners, store signs, and displays that make your business unforgettable at first glance.",
-            color: "from-purple-500 to-fuchsia-500",
+            desc: `
+      First impressions matter — and your outdoor signage is often your first. 
+      We produce large-format displays, storefront signs, event backdrops, banners, and directional signage designed to grab attention and withstand Nigerian weather conditions. 
+      Using high-quality materials and UV-resistant inks, we make sure your signage remains vibrant, durable, and professional over time. 
+      From design to installation, ABPrint handles every stage with precision to ensure your brand shines — literally and figuratively — wherever it’s displayed.
+    `,
             icon: <FaStore />,
-            image: "/images/signage.jpg",
+            path: 'signage',
+            image: services5,
         },
     ];
 
@@ -91,37 +152,37 @@ const Services = () => {
             icon: <FaHandshake className="text-blue-600 text-3xl" />,
             title: "Trusted Collaboration",
             desc: "We work closely with our clients to bring ideas to reality.",
-            image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80", // handshake/collaboration
+            image: why1
         },
         {
             icon: <FaAward className="text-gray-500 text-3xl" />,
             title: "Premium Quality",
             desc: "Only top-tier materials, inks, and finishes for stunning results.",
-            image: "https://images.unsplash.com/photo-1581091012184-5c8afaa0f42d?auto=format&fit=crop&w=1200&q=80", // printing press close-up
+            image: why2
         },
         {
             icon: <FaClock className="text-blue-600 text-3xl" />,
             title: "Fast Turnaround",
             desc: "Quick and efficient delivery without compromising excellence.",
-            image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=80", // production workflow/timeliness
+            image: why3
         },
         {
             icon: <FaBolt className="text-gray-500 text-3xl" />,
             title: "Vibrant Printing",
             desc: "Rich, precise colors that make your brand pop off the page.",
-            image: "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=1200&q=80", // CMYK color printing
+            image: why4
         },
         {
             icon: <FaPalette className="text-blue-600 text-3xl" />,
             title: "Design Expertise",
             desc: "From logo creation to complete brand identity systems.",
-            image: "https://images.unsplash.com/photo-1581291519195-ef11498d1cf5?auto=format&fit=crop&w=1200&q=80", // designer workspace
+            image: why5
         },
         {
             icon: <FaLightbulb className="text-gray-500 text-3xl" />,
             title: "Creative Strategy",
             desc: "Helping brands stand out through bold, thoughtful design.",
-            image: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=80", // brainstorming/creative idea
+            image: why6
         },
     ];
 
@@ -199,7 +260,7 @@ const Services = () => {
                             transition={{ duration: 6, repeat: Infinity }}
                         >
                             <img
-                                src={electricalImg}
+                                src={service}
                                 alt="Project Showcase"
                                 className="w-full h-full object-cover"
                             />
@@ -242,6 +303,7 @@ const Services = () => {
                     {services.map((service, idx) => (
                         <motion.div
                             key={idx}
+                            id={service.path}
                             className={`relative flex flex-col md:flex-row items-center gap-12 ${idx % 2 !== 0 ? "md:flex-row-reverse" : ""
                                 }`}
                             initial={{ opacity: 0, y: 80 }}
@@ -255,17 +317,17 @@ const Services = () => {
                                 <img
                                     src={service.image}
                                     alt={service.title}
-                                    className="w-full rounded-3xl shadow-2xl object-cover border border-blue-100"
+                                    className="w-full rounded-3xl h-[500px] shadow-2xl object-cover border border-blue-100"
                                 />
                             </div>
 
                             {/* Content block */}
-                            <div className="md:w-1/2 space-y-6 bg-white/80 backdrop-blur-md rounded-3xl p-10 shadow-lg border border-blue-100">
+                            <div className="md:w-1/2 space-y-6 bg-white/80 backdrop-blur-md rounded-3xl sm:p-10 p-5 shadow-lg border border-blue-100">
                                 <div className="text-blue-500 text-4xl">{service.icon}</div>
                                 <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
                                 <p className="text-gray-600 leading-relaxed">{service.desc}</p>
                                 <Link to="/contact">
-                                    <button className="px-6 py-2 mt-2 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 hover:scale-105 transition">
+                                    <button className="px-6 py-2 mt-6 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 hover:scale-105 transition">
                                         Request Service
                                     </button>
                                 </Link>
@@ -498,7 +560,7 @@ const Services = () => {
                         className="space-y-6 md:w-1/2"
                     >
                         <h2 className="sm:text-5xl text-4xl md:text-6xl font-extrabold leading-tight">
-                            Let’s Create <br />
+                            Let’s Create <br className='sm:block hidden' />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-black/50 to-black/70">
                                 Something Beautiful
                             </span>
@@ -510,7 +572,7 @@ const Services = () => {
                             your identity unforgettable.
                         </p>
 
-                        <div className="flex gap-4 mt-8">
+                        <div className="flex sm:flex-row flex-col gap-4 mt-8">
                             <Link to="/contact">
                                 <button className="px-8 py-3 rounded-full bg-white text-blue-600 font-semibold shadow-lg hover:scale-105 transition-transform">
                                     Start Your Project
@@ -533,23 +595,23 @@ const Services = () => {
                         transition={{ duration: 0.8 }}
                     >
                         <motion.img
-                            src="/assets/mockup-businesscard.png"
+                            src={bc}
                             alt="Business Card Mockup"
-                            className="absolute w-60 md:w-72 rounded-2xl shadow-2xl rotate-6 border border-white/10"
+                            className="absolute w-24 md:w-44 rounded-2xl shadow-2xl rotate-6 border border-white/10"
                             animate={{ y: [0, -15, 0] }}
                             transition={{ duration: 5, repeat: Infinity }}
                         />
                         <motion.img
-                            src="/assets/mockup-poster.png"
+                            src={poster}
                             alt="Poster Design"
-                            className="absolute top-24 left-0 w-56 md:w-64 rounded-2xl shadow-2xl -rotate-6 border border-white/10"
+                            className="absolute top-20 left-0 w-24 md:w-44 h-40 object-cover rounded-2xl shadow-2xl -rotate-6 border border-white/10"
                             animate={{ y: [0, 10, 0] }}
                             transition={{ duration: 4, repeat: Infinity }}
                         />
                         <motion.img
-                            src="/assets/mockup-tshirt.png"
+                            src={brand}
                             alt="Branded T-shirt"
-                            className="absolute top-48 right-8 w-64 md:w-72 rounded-2xl shadow-2xl rotate-3 border border-white/10"
+                            className="absolute top-[100px] right-6 w-24 md:w-44 rounded-2xl shadow-2xl rotate-3 border border-white/10"
                             animate={{ y: [0, -10, 0] }}
                             transition={{ duration: 6, repeat: Infinity }}
                         />

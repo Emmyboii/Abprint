@@ -17,8 +17,10 @@ import {
     FaPrint,
     FaPenNib,
 } from "react-icons/fa";
-import heroImg from "../Images/hero.png";
-import electricians from "../Images/electricians working.jpeg";
+import Hero1 from "../Images/Job22.png";
+import Hero2 from "../Images/hero2.webp";
+import Hero3 from "../Images/hero3.png";
+import about from "../Images/AbLogo.png";
 // import electricians2 from "../Images/Smiling Electrician.jpeg";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
@@ -26,17 +28,23 @@ import Testimonials from "../Components/Testimonials";
 import Map from "../Components/Map";
 import FAQ from "../Components/FAQ";
 import Ab from "../Images/AbLogo.png";
+import services1 from "../Images/services1.jpg";
+import services2 from "../Images/services2.jpg";
+import services3 from "../Images/services3.jpeg";
+import services4 from "../Images/services4.png";
+import services5 from "../Images/services5.jpeg";
 
 const Home = () => {
 
     const services = [
         {
             id: 1,
-            title: "Custom Branding & Logo Design",
-            desc: "We craft timeless brand identities that reflect your mission and capture attention across every medium.",
+            title: "Product & Packaging Design",
+            desc: "Unbox the power of presentation with packaging that enhances your product and amplifies your brand identity.",
             color: "from-blue-500 to-indigo-500",
-            icon: <FaPenNib />,
-            image: "/images/branding.jpg",
+            icon: <FaBoxOpen />,
+            path: '/services#product',
+            image: services4,
         },
         {
             id: 2,
@@ -44,7 +52,8 @@ const Home = () => {
             desc: "From business cards to large-format posters — every print is a statement of quality and detail.",
             color: "from-pink-500 to-rose-500",
             icon: <FaPrint />,
-            image: "/images/printing.jpg",
+            path: '/services#premium',
+            image: services2,
         },
         {
             id: 3,
@@ -52,15 +61,17 @@ const Home = () => {
             desc: "T-shirts, hoodies, tote bags — high-quality prints that bring your brand to life on wearable canvases.",
             color: "from-yellow-400 to-orange-500",
             icon: <FaTshirt />,
-            image: "/images/apparel.jpg",
+            path: '/services#merch',
+            image: services3,
         },
         {
             id: 4,
-            title: "Product & Packaging Design",
-            desc: "Unbox the power of presentation with packaging that enhances your product and amplifies your brand identity.",
+            title: "Custom Branding & Logo Design",
+            desc: "We craft timeless brand identities that reflect your mission and capture attention across every medium.",
             color: "from-emerald-400 to-teal-500",
-            icon: <FaBoxOpen />,
-            image: "/images/packaging.jpg",
+            icon: <FaPenNib />,
+            path: '/services#custom',
+            image: services1,
         },
         {
             id: 5,
@@ -68,7 +79,8 @@ const Home = () => {
             desc: "Eye-catching banners, store signs, and displays that make your business unforgettable at first glance.",
             color: "from-purple-500 to-fuchsia-500",
             icon: <FaStore />,
-            image: "/images/signage.jpg",
+            path: '/services#signage',
+            image: services5,
         },
     ];
 
@@ -85,7 +97,7 @@ const Home = () => {
 
                     {/* Floating Elements */}
                     <motion.img
-                        src={heroImg}
+                        src={Hero2}
                         alt="poster"
                         initial={{ y: 50, opacity: 0 }}
                         animate={{ y: [0, -10, 0], opacity: 1 }}
@@ -94,16 +106,16 @@ const Home = () => {
                     />
 
                     <motion.img
-                        src={heroImg}
+                        src={Hero1}
                         alt="card"
                         initial={{ y: -30, opacity: 0 }}
                         animate={{ y: [0, 10, 0], opacity: 1 }}
                         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                        className="absolute w-52 md:w-60 bottom-[20%] left-[12%] -rotate-[8deg] rounded-xl shadow-lg opacity-80"
+                        className="absolute w-52 md:w-60 bottom-[20%] left-[12%] object-cover -rotate-[8deg] rounded-xl shadow-lg opacity-80"
                     />
 
                     <motion.img
-                        src={heroImg}
+                        src={Hero3}
                         alt="mug"
                         initial={{ scale: 0.8, opacity: 0 }}
                         animate={{ scale: [1, 1.05, 1], opacity: 1 }}
@@ -213,7 +225,7 @@ const Home = () => {
                             <div className="absolute -inset-2 bg-gradient-to-tr from-blue-400 to-pink-300 rounded-3xl blur-2xl opacity-30"></div>
                             <div className="relative bg-white rounded-3xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-700">
                                 <img
-                                    src={electricians}
+                                    src={about}
                                     alt="Printing team at work"
                                     className="w-full h-full object-cover"
                                 />
@@ -419,7 +431,7 @@ const Home = () => {
                                         <p className="text-gray-600 text-lg">{service.desc}</p>
 
                                         <Link
-                                            to="/contact"
+                                            to={service.path}
                                             className={`inline-block bg-gradient-to-r ${service.color} text-white px-6 py-3 rounded-full font-semibold shadow hover:shadow-lg hover:scale-105 transition`}
                                         >
                                             Learn More
